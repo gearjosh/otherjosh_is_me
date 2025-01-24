@@ -1,5 +1,6 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16pt;
 }
 
 .flex {
@@ -16,6 +17,18 @@ body {
 
 .whitetext {
   color: aliceblue;
+}
+
+.x4text {
+  font-size: 4rem;
+}
+
+.x3text {
+  font-size: 3rem;
+}
+
+.x2text {
+  font-size: 2rem;
 }
 
 .liltext {
@@ -79,7 +92,6 @@ body {
   background-image: url("./img/dnd-bx.png");
   background-size: cover;
   background-position: center;
-  font-size: xx-large;
   height: 21rem;
   margin: 0 auto;
   padding: 1rem 2rem;
