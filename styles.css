@@ -1,6 +1,6 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16pt;
+  color: dimgrey;
 }
 
 .flex {
@@ -15,20 +15,28 @@ body {
   flex-direction: column;
 }
 
+.flexspaced {
+  justify-content: space-between;
+}
+
 .whitetext {
   color: aliceblue;
 }
 
-.x4text {
+.h1text {
   font-size: 4rem;
 }
 
-.x3text {
+.h2text {
   font-size: 3rem;
 }
 
-.x2text {
+.h3text {
   font-size: 2rem;
+}
+
+.h4text {
+  font-size: 1.5rem;
 }
 
 .liltext {
@@ -37,6 +45,10 @@ body {
 
 .redshadow {
   text-shadow: #EE5029 0 .25rem;
+}
+
+.mediumredshadow {
+  text-shadow: #EE5029 0 .125rem;
 }
 
 .lilredshadow {
