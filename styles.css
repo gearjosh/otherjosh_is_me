@@ -1,6 +1,5 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: dimgrey;
 }
 
 .flex {
@@ -23,6 +22,10 @@ body {
   color: aliceblue;
 }
 
+.greytext {
+  color: #505050;
+}
+
 .h1text {
   font-size: 4rem;
 }
@@ -36,7 +39,7 @@ body {
 }
 
 .h4text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .liltext {
@@ -95,9 +98,39 @@ body {
   margin-right: 1rem;
 }
 
+.nooutline {
+  outline: none;
+}
+
+.noborder {
+  border-style: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
 .imgfit {
   max-width: 100%;
   object-fit: contain;
+}
+
+.button {
+  height: 2.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 0.125rem #9F5272;
+  transition: transform 200ms;
+}
+
+.button.active,
+.button:hover,
+.button:focus {
+  transform: translateY(0.125rem);
+  box-shadow: none;
 }
 
 .header {
@@ -127,8 +160,8 @@ body {
 
 .sidebar {
   width: 25%;
-  position: sticky;
   top: 1rem;
+  position: sticky;
 }
 
 .main {
