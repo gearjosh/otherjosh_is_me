@@ -86,6 +86,14 @@ body {
   border-radius: .25rem;
 }
 
+.roundtop {
+  border-radius: .25rem .25rem 0 0;
+}
+
+.roundbottom {
+  border-radius: 0 0 .25rem .25rem;
+}
+
 .padded {
   padding: 1rem;
 }
@@ -112,6 +120,10 @@ body {
 
 .fullwidth {
   width: 100%;
+}
+
+.hide {
+  display: none;
 }
 
 .imgfit {
