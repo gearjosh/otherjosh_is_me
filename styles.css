@@ -1,5 +1,10 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+li {
+  margin-left: 1rem;
 }
 
 .flex {
@@ -126,6 +131,10 @@ body {
   display: none;
 }
 
+.flip {
+  transform: rotate(180deg);
+}
+
 .imgfit {
   max-width: 100%;
   object-fit: contain;
@@ -172,8 +181,6 @@ body {
 
 .sidebar {
   width: 25%;
-  top: 1rem;
-  position: sticky;
 }
 
 .main {
