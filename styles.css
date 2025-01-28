@@ -135,6 +135,11 @@ li {
   transform: rotate(180deg);
 }
 
+.pixelgrid {
+  height: 50vw;
+  width: 50vw;
+}
+
 .imgfit {
   max-width: 100%;
   object-fit: contain;
