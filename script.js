@@ -1,4 +1,5 @@
 // utility functions
+
 const expandBody = function (idString) {
   const bodyID = idString.split("-")[0] + "-body";
   $(bodyID).toggle();
@@ -7,6 +8,7 @@ const expandBody = function (idString) {
 };
 
 // event listeners
+
 $("#walkertreker-head").click(function () {
   expandBody("#walkertreker-head");
 });
