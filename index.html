@@ -7,13 +7,13 @@
     <link href="styles.css" rel="stylesheet" type="text/css" media="all">
     <title>otherjosh's very cool website</title>
   </head>
-  <body class="green">
+  <body class="color1">
 
     <!-- container -->
-    <div class="container padded orange">
+    <div class="container padded color2">
       <div class="header flexcolumn rounded">
-        <h1 class="whitetext h1text redshadow">Josh Gearheart <span class="liltext">is</span> otherjosh</h1>
-        <h4 class="whitetext h4text lilredshadow">
+        <h1 class="whitetext h1text bigshadow">Josh Gearheart <span class="liltext">is</span> otherjosh</h1>
+        <h4 class="whitetext h4text lilshadow">
           Software Developer<br/>
           Polymath Nerd<br/>
           Movie Review Writer<br/>
@@ -27,43 +27,43 @@
       <!-- content area -->
       <div class="flex flexrow">
         <!-- sidebar -->
-        <div class="sidebar flex flexcolumn padded purple rounded topmargin rightmargin">
+        <div class="sidebar flex flexcolumn padded color3 rounded topmargin rightmargin">
           <img class="imgfit rounded" title="A photo of otherjosh eating Rice Krispies™" src="img/otherjosh_picture.jpg" alt="A photo of otherjosh eating Rice Krispies™">
 
           <a href="https://letterboxd.com/otherjosh/" target="_blank">
-            <button class="button pointer nooutline noborder green rounded fullwidth whitetext">Read my movie reviews</button>
+            <button class="button pointer nooutline noborder color1 rounded fullwidth whitetext">Read my movie reviews</button>
           </a>
 
           <a href="https://open.spotify.com/artist/0RDRAIStOOEz0xEB9EcFIt" target="_blank">
-            <button class="button pointer nooutline noborder green rounded fullwidth whitetext">Listen to my bad music project</button>
+            <button class="button pointer nooutline noborder color1 rounded fullwidth whitetext">Listen to my bad music project</button>
           </a>
 
           <a href="https://open.spotify.com/artist/0xRUQxosi9oTtqbFJuMcw5?si=xQ72CUzISaKwW7ix3lmWgg" target="_blank">
-            <button class="button pointer nooutline noborder green rounded fullwidth whitetext">Listen to my improvised solo EP</button>
+            <button class="button pointer nooutline noborder color1 rounded fullwidth whitetext">Listen to my improvised solo EP</button>
           </a>
 
           <a href="https://github.com/gearjosh" target="_blank">
-            <button class="button pointer nooutline noborder green rounded fullwidth whitetext">Check out the code I write</button>
+            <button class="button pointer nooutline noborder color1 rounded fullwidth whitetext">Check out the code I write</button>
           </a>
 
           <a href="https://www.linkedin.com/in/josh-gearheart/" target="_blank">
-            <button class="button pointer nooutline noborder green rounded fullwidth whitetext">Check out my career history</button>
+            <button class="button pointer nooutline noborder color1 rounded fullwidth whitetext">Check out my career history</button>
           </a>
         </div>
 
         <!-- main -->
-        <div class="main padded rounded pink topmargin">
-          <h2 class="h2text whitetext mediumredshadow">Cool Stuff By Me <span class="liltext">(click to expand)</span></h2>
+        <div class="main padded rounded color4 topmargin">
+          <h2 class="h2text whitetext mediumshadow">Cool Stuff By Me <span class="liltext">(click to expand)</span></h2>
 
           <!-- walker treker -->
-          <div id="walkertreker-head" class="coolstuff flex flexcolumn rounded green padded topmargin pointer">
+          <div id="walkertreker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
             <div class="flex flexrow flexspaced">
-              <h3 class="whitetext mediumredshadow h3text">Walker Treker Alpha Build</h3>
+              <h3 class="whitetext mediumshadow h3text">Walker Treker Alpha Build</h3>
               <p class="whitetext h3text">&#9650;</p>
             </div>
             <p class="greytext">A React Native app where I built all the frontend.</p>
           </div>
-          <div id="walkertreker-body" class="roundbottom orange padded hide">
+          <div id="walkertreker-body" class="roundbottom color2 padded hide">
             <p>
               Walker Treker is a social walking game developed in React Native for iOS and Android. I was lucky enough to co-build the very first version with one other developer. The app uses Redux with React to dispatch actions, and the Google Fit API to access the phones pedometer. I was responsible for developing all the frontend code, and my co-developer was responsible for all the backend code. We developed the first version of the game in seven weeks. Two subsequent teams have iterated on our original alpha version.
             </p>
@@ -92,23 +92,23 @@
           </div>
 
           <!-- pixelart -->
-          <div id="pixelart-head" class="coolstuff flex flexcolumn rounded green padded topmargin pointer">
+          <div id="pixelart-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
             <div class="flex flexrow flexspaced">
-              <h3 class="whitetext mediumredshadow h3text">Pixel Art Maker</h3>
+              <h3 class="whitetext mediumshadow h3text">Pixel Art Maker</h3>
               <p class="whitetext h3text">&#9650;</p>
             </div>
             <p class="greytext">A cool little web app to make pixel art.</p>
           </div>
-          <div id="pixelart-body" class="roundbottom orange padded hide">
+          <div id="pixelart-body" class="roundbottom color2 padded hide">
             <form id="pixelDimensions">
               <label for="pixel art height">Height</label>
               <input name="pixel art height" type="number" class="lilpadded nooutline noborder rounded" placeholder="Pixels Tall" />
               <label for="pixel art width">Width</label>
               <input name="pixel art width" type="number" class="lilpadded nooutline noborder rounded" placeholder="Pixels Across" />
-              <button type="submit" class="button pointer nooutline noborder red rounded whitetext leftmargin">Generate Pixel Grid</button>
+              <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext leftmargin">Generate Pixel Grid</button>
             </form>
             <div id="pixelMaker" class="hide">
-              <p class="topmargin"><i>Choose a color from the color picker and click a square below to color it.</i></p>
+              <p class="topmargin"><i>Choose a color below. Then click a square to color it in.</i></p>
               <div class="flex flexrow flexspaced topmargin">
                 <div class="palette palette0 circle pointer grow"></div>
                 <div class="palette palette1 circle pointer"></div>
@@ -132,15 +132,77 @@
           </div>
 
           <!-- colorchange -->
-          <div id="colorchange-head" class="coolstuff flex flexcolumn rounded green padded topmargin pointer">
+          <div id="colorchange-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
             <div class="flex flexrow flexspaced">
-              <h3 class="whitetext mediumredshadow h3text">Change this site's color theme</h3>
+              <h3 class="whitetext mediumshadow h3text">Color Theme Switcher</h3>
               <p class="whitetext h3text">&#9650;</p>
             </div>
-            <p class="greytext">Adjust the colors if they hurt your eyes.</p>
+            <p class="greytext">Adjust this site's colors if they hurt your eyes.</p>
           </div>
-          <div id="colorchange-body" class="roundbottom orange padded  hide">
-            <p>coming soon...</p>
+          <div id="colorchange-body" class="roundbottom color2 padded  hide">
+            <div class="flex flexrow">
+              <p><i>Choose a color palette.</i></p>
+            </div>
+            <div class="flex flexrow">
+              <button id="dnd" class="colorchange button whitetext pointer nooutline noborder color5 rounded width10">Swords and Sorceresses</button>
+              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+                <div class="colorswatch dnd1"></div>
+                <div class="colorswatch dnd2"></div>
+                <div class="colorswatch dnd3"></div>
+                <div class="colorswatch dnd4"></div>
+                <div class="colorswatch dnd5"></div>
+              </div>
+            </div>
+            <div class="flex flexrow topmargin">
+              <button id="mono" class="colorchange button whitetext pointer nooutline noborder color5 rounded width10">Professional Monochrome</button>
+              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+                <div class="colorswatch mono1"></div>
+                <div class="colorswatch mono2"></div>
+                <div class="colorswatch mono3"></div>
+                <div class="colorswatch mono4"></div>
+                <div class="colorswatch mono5"></div>
+              </div>
+            </div>
+            <div class="flex flexrow topmargin">
+              <button id="pastel" class="colorchange button whitetext pointer nooutline noborder color5 rounded width10">Gentle Pastel</button>
+              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+                <div class="colorswatch pastel1"></div>
+                <div class="colorswatch pastel2"></div>
+                <div class="colorswatch pastel3"></div>
+                <div class="colorswatch pastel4"></div>
+                <div class="colorswatch pastel5"></div>
+              </div>
+            </div>
+            <div class="flex flexrow topmargin">
+              <button id="cheerful" class="colorchange button whitetext pointer nooutline noborder color5 rounded width10">Cheerful Nostalgia</button>
+              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+                <div class="colorswatch cheerful1"></div>
+                <div class="colorswatch cheerful2"></div>
+                <div class="colorswatch cheerful3"></div>
+                <div class="colorswatch cheerful4"></div>
+                <div class="colorswatch cheerful5"></div>
+              </div>
+            </div>
+            <div class="flex flexrow topmargin">
+              <button id="vintage" class="colorchange button whitetext pointer nooutline noborder color5 rounded width10">Vintage Blue</button>
+              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+                <div class="colorswatch vintage1"></div>
+                <div class="colorswatch vintage2"></div>
+                <div class="colorswatch vintage3"></div>
+                <div class="colorswatch vintage4"></div>
+                <div class="colorswatch vintage5"></div>
+              </div>
+            </div>
+            <div class="flex flexrow topmargin">
+              <button id="beach" class="colorchange button whitetext pointer nooutline noborder color5 rounded width10">Tropical Beach</button>
+              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+                <div class="colorswatch beach1"></div>
+                <div class="colorswatch beach2"></div>
+                <div class="colorswatch beach3"></div>
+                <div class="colorswatch beach4"></div>
+                <div class="colorswatch beach5"></div>
+              </div>
+            </div>
           </div>
 
         </div>

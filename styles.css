@@ -7,6 +7,8 @@ li {
   margin-left: 1rem;
 }
 
+/* Flex Layouts */
+
 .flex {
   display: flex;
 }
@@ -26,6 +28,8 @@ li {
 .flexend {
   justify-content: flex-end;
 }
+
+/* Text Options */
 
 .whitetext {
   color: aliceblue;
@@ -55,37 +59,165 @@ li {
   font-size: 66%;
 }
 
-.redshadow {
+/* Shadows */
+
+.bigshadow {
   text-shadow: #EE5029 0 .25rem;
 }
 
-.mediumredshadow {
+.mediumshadow {
   text-shadow: #EE5029 0 .125rem;
 }
 
-.lilredshadow {
+.lilshadow {
   text-shadow: #EE5029 0 .0625rem;
 }
 
-.orange {
+/* Dynamic Colors */
+
+.color1 {
+  background-color: #5AAA4C;
+}
+
+.color2 {
   background-color: #F8B334;
 }
 
-.pink {
-  background-color: #9F5272;
-}
-
-.red {
-  background-color: #EE5029;
-}
-
-.purple {
+.color3 {
   background-color: #7A58AF;
 }
 
-.green {
+.color4 {
+  background-color: #9F5272;
+}
+
+.color5 {
+  background-color: #EE5029;
+}
+
+/* Alternate Palette Colors */
+
+.dnd1 {
   background-color: #5AAA4C;
 }
+
+.dnd2 {
+  background-color: #F8B334;
+}
+
+.dnd3 {
+  background-color: #7A58AF;
+}
+
+.dnd4 {
+  background-color: #9F5272;
+}
+
+.dnd5 {
+  background-color: #EE5029;
+}
+
+.mono1 {
+  background-color: #595348;
+}
+
+.mono2 {
+  background-color: #8C877D;
+}
+
+.mono3 {
+  background-color: #F2EBDC;
+}
+
+.mono4 {
+  background-color: #40382E;
+}
+
+.mono5 {
+  background-color: #D9CBBA;
+}
+
+.pastel1 {
+  background-color: #D8E5E5;
+}
+
+.pastel2 {
+  background-color: #D2B1CF;
+}
+
+.pastel3 {
+  background-color: #E9C3C5;
+}
+
+.pastel4 {
+  background-color: #E3DEE5;
+}
+
+.pastel5 {
+  background-color: #E7E3C6;
+}
+
+.cheerful1 {
+  background-color: #256D94;
+}
+
+.cheerful2 {
+  background-color: #CCEEFF;
+}
+
+.cheerful3 {
+  background-color: #FF7300;
+}
+
+.cheerful4 {
+  background-color: #FFC738;
+}
+
+.cheerful5 {
+  background-color: #44B3B1;
+}
+
+.vintage1 {
+  background-color: #163E73;
+}
+
+.vintage2 {
+  background-color: #2E4159;
+}
+
+.vintage3 {
+  background-color: #5A798C;
+}
+
+.vintage4 {
+  background-color: #F2F2F2;
+}
+
+.vintage5 {
+  background-color: #BFBFBF;
+}
+
+.beach1 {
+  background-color: #D5E7F2;
+}
+
+.beach2 {
+  background-color: #59C1D9;
+}
+
+.beach3 {
+  background-color: #B9BF04;
+}
+
+.beach4 {
+  background-color: #888C03;
+}
+
+.beach5 {
+  background-color: #D9C14A;
+}
+
+/* Static Colors */
 
 .white {
   background-color: aliceblue;
@@ -94,8 +226,8 @@ li {
 /* Pixel Palette */
 
 .palette {
-  width: 3vw;
-  height: 3vw;
+  width: 2.7vw;
+  height: 2.7vw;
 }
 
 .palette0 {
@@ -162,7 +294,12 @@ li {
   background-color: #000000;
 }
 
-/* End Pixel Palette */
+/* Color Change Formatting */
+
+.colorswatch {
+  width: 2.5rem;
+  height: 2.5rem;
+}
 
 .rounded {
   border-radius: .25rem;
@@ -204,12 +341,21 @@ li {
   outline: none;
 }
 
+.whiteborder {
+  border: 1px solid aliceblue;
+  contain: paint;
+}
+
 .noborder {
   border-style: none;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.width10 {
+  width: 10vw;
 }
 
 .fullwidth {
@@ -225,7 +371,7 @@ li {
 }
 
 .grow {
-  transform: scale(118%);
+  transform: scale(125%);
 }
 
 .pixelgrid {

@@ -57,3 +57,15 @@ $(".pixelgrid").on("click", "div", function () {
     "background-color": color
   });
 });
+
+$(".colorchange").click(function () {
+  const theme = $(this).attr("id");
+  const themes = [];
+  
+  for (let i = 1; i <= 5; i++) {
+    themes.push($("." + theme + i).css("background-color"));
+  }
+  for (let i = 1; i <= 5; i++) {
+    $(".color" + i).css("background-color", themes[i - 1]);
+  }
+});
