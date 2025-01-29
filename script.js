@@ -1,10 +1,11 @@
 // utility functions
 
 const expandBody = function (idString) {
-  const bodyID = idString.split("-")[0] + "-body";
+  const headID = "#" + idString
+  const bodyID = "#" + idString.split("-")[0] + "-body";
   $(bodyID).toggle();
-  $(idString).children().eq(0).children().eq(1).toggleClass("flip");
-  $(idString).toggleClass("roundtop rounded");
+  $(headID).children().eq(0).children().eq(1).toggleClass("flip");
+  $(headID).toggleClass("roundtop rounded");
 };
 
 const createGrid = function (width, height) {
@@ -23,25 +24,19 @@ const createGrid = function (width, height) {
 
 // event listeners
 
-$("#walkertreker-head").click(function () {
-  expandBody("#walkertreker-head");
-});
-
-$("#pixelart-head").click(function () {
-  expandBody("#pixelart-head");
-});
-
-$("#changecolors-head").click(function () {
-  expandBody("#changecolors-head");
-});
+$('.coolstuff').click(function () {
+  expandBody($(this).attr('id'))
+})
 
 $("#pixelDimensions").submit(function (event) {
   event.preventDefault();
+
   const values = $(this).serializeArray();
   const w = values[1].value;
   const h = values[0].value;
   const pixelSize = 50 / Number(w) + "vw";
   const grid = createGrid(w, h);
+
   $("#pixelGrid").html(grid);
   $(".pixel").css({
     height: pixelSize,
