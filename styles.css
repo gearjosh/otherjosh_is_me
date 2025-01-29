@@ -3,6 +3,10 @@ body {
   color: #333333;
 }
 
+ul {
+  list-style: circle;
+}
+
 li {
   margin-left: 1rem;
 }
