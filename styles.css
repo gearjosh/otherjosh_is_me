@@ -91,6 +91,79 @@ li {
   background-color: aliceblue;
 }
 
+/* Pixel Palette */
+
+.palette {
+  width: 3vw;
+  height: 3vw;
+}
+
+.palette0 {
+  background-color: #FFFFFF;
+}
+
+.palette1 {
+  background-color: #FCF502;
+}
+
+.palette2 {
+  background-color: #FF6400;
+}
+
+.palette3 {
+  background-color: #DD0502;
+}
+
+.palette4 {
+  background-color: #F10185;
+}
+
+.palette5 {
+  background-color: #4600A6;
+}
+
+.palette6 {
+  background-color: #1200D6;
+}
+
+.palette7 {
+  background-color: #00AEE9;
+}
+
+.palette8 {
+  background-color: #1ABA0D;
+}
+
+.palette9 {
+  background-color: #006407;
+}
+
+.palette10 {
+  background-color: #572801;
+}
+
+.palette11 {
+  background-color: #917135;
+}
+
+.palette12 {
+  background-color: #C2C2C2;
+}
+
+.palette13 {
+  background-color: #818181;
+}
+
+.palette14 {
+  background-color: #3E3E3E;
+}
+
+.palette15 {
+  background-color: #000000;
+}
+
+/* End Pixel Palette */
+
 .rounded {
   border-radius: .25rem;
 }
@@ -101,6 +174,10 @@ li {
 
 .roundbottom {
   border-radius: 0 0 .25rem .25rem;
+}
+
+.circle {
+  border-radius: 50%;
 }
 
 .padded {
@@ -147,13 +224,17 @@ li {
   transform: rotate(180deg);
 }
 
+.grow {
+  transform: scale(110%);
+}
+
 .pixelgrid {
   width: 50vw;
   margin: 1rem auto 0 auto;
 }
 
 .pixel {
-  background-color: aliceblue;
+  background-color: white;
   outline: 1px solid lightgrey;
 }
 
