@@ -8,7 +8,6 @@ const expandBody = function (idString) {
 };
 
 const createGrid = function (width, height) {
-  const pixelSize = 50 / Number(width);
   let pixelGrid = "<div class='flex flexcolumn'>";
   let row = '<div class="flex flexrow">';
   for (let index = 0; index < width; index++) {
@@ -19,10 +18,6 @@ const createGrid = function (width, height) {
     pixelGrid += row;
   }
   pixelGrid += "</div>";
-  $('.pixel').css({
-    height: pixelSize + "vw",
-    width: pixelSize + "vw"
-  })
   return pixelGrid;
 };
 
@@ -38,4 +33,19 @@ $("#pixelart-head").click(function () {
 
 $("#changecolors-head").click(function () {
   expandBody("#changecolors-head");
+});
+
+$("#pixelDimensions").submit(function (event) {
+  event.preventDefault();
+  const values = $(this).serializeArray();
+  const w = values[1].value;
+  const h = values[0].value;
+  const pixelSize = 50 / Number(w) + "vw";
+  const grid = createGrid(w, h);
+  $("#pixelGrid").html(grid);
+  $(".pixel").css({
+    height: pixelSize,
+    width: pixelSize,
+  });
+  $("#pixelGrid").show();
 });
