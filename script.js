@@ -42,5 +42,5 @@ $("#pixelDimensions").submit(function (event) {
     height: pixelSize,
     width: pixelSize,
   });
-  $("#pixelGrid").show();
+  $("#pixelMaker").show();
 });
