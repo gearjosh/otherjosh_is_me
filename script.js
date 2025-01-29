@@ -37,6 +37,7 @@ $("#pixelDimensions").submit(function (event) {
   const pixelSize = 50 / Number(w) + "vw";
   const grid = createGrid(w, h);
 
+  $(this).reset();
   $("#pixelGrid").html(grid);
   $(".pixel").css({
     height: pixelSize,
