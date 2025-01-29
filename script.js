@@ -12,7 +12,7 @@ const createGrid = function (width, height) {
   let pixelGrid = "<div class='flex flexcolumn'>";
   let row = '<div class="flex flexrow">';
   for (let index = 0; index < width; index++) {
-    row += "<div class='pixel'></div>";
+    row += "<div class='pixel pointer'></div>";
   }
   row += "</div>";
   for (let index = 0; index < height; index++) {
@@ -44,4 +44,16 @@ $("#pixelDimensions").submit(function (event) {
   });
   $("#pixelMaker").show();
   $(this).trigger('reset');
+});
+
+$(".palette").click(function () {
+  $(".palette").removeClass("grow");
+  $(this).addClass("grow")
+});
+
+$(".pixelgrid").on("click", "div", function () {
+  const color = $(".grow").css("background-color");
+  $(this).css({
+    "background-color": color
+  });
 });
