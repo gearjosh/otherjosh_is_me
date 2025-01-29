@@ -61,11 +61,26 @@ $(".pixelgrid").on("click", "div", function () {
 $(".colorchange").click(function () {
   const theme = $(this).attr("id");
   const themes = [];
-  
+
+  if (theme == "mono") {
+    $(".greytext").css("color", "#BFAE99");
+  } else {
+    $(".greytext").css("color", "#505050");
+  }
+
   for (let i = 1; i <= 5; i++) {
     themes.push($("." + theme + i).css("background-color"));
   }
   for (let i = 1; i <= 5; i++) {
     $(".color" + i).css("background-color", themes[i - 1]);
   }
+  $(".bigshadow").css({
+    "text-shadow": themes[4] + " 0 .25rem",
+  });
+  $(".mediumshadow").css({
+    "text-shadow": themes[4] + " 0 .125rem",
+  });
+  $(".lilshadow").css({
+    "text-shadow": themes[4] + " 0 .0625rem",
+  });
 });
