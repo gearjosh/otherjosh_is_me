@@ -74,6 +74,10 @@ $(".colorchange").click(function () {
   for (let i = 1; i <= 5; i++) {
     $(".color" + i).css("background-color", themes[i - 1]);
   }
+
+  $(".header").css("background-image", "url('./img/" + theme + "-header.png')");
+  $(".footer").css("background-image", "url('./img/" + theme + "-footer.png')");
+
   $(".bigshadow").css({
     "text-shadow": themes[4] + " 0 .25rem",
   });
