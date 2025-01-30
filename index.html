@@ -18,7 +18,7 @@
           Software Developer<br/>
           Polymath Nerd<br/>
           Movie Reviewer<br/>
-          Experimental Music Maker<br/>
+          Experimental Musician<br/>
           Insatiable Artist<br/>
           Good Cook<br/>
         </h4>
@@ -101,10 +101,10 @@
           </div>
           <div id="pixelart-body" class="roundbottom color2 padded hide">
             <form id="pixelDimensions">
-              <label for="pixel art height">Height</label>
-              <input name="pixel art height" type="number" class="lilpadded nooutline noborder rounded" placeholder="Pixels Tall" />
-              <label for="pixel art width">Width</label>
-              <input name="pixel art width" type="number" class="lilpadded nooutline noborder rounded" placeholder="Pixels Across" />
+              <label for="pixelHeight">Height</label>
+              <input id="pixelHeight" name="pixel art height" type="number" class="lilpadded nooutline noborder rounded" placeholder="Pixels Tall" />
+              <label for="pixelWidth">Width</label>
+              <input id="pixelWidth" name="pixel art width" type="number" class="lilpadded nooutline noborder rounded" placeholder="Pixels Across" />
               <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext leftmargin">Generate Pixel Grid</button>
             </form>
             <div id="pixelMaker" class="hide">
@@ -211,10 +211,11 @@
               <h3 class="whitetext mediumshadow h3text">Video Poker</h3>
               <p class="whitetext h3text">&#9650;</p>
             </div>
-            <p class="greytext">Play video poker, based off the classic Radica Video Poker LCD game.</p>
+            <p class="greytext">Play video poker, based off the classic <a href="./img/radica.png" target="_blank">Radica Video Poker</a> LCD game.</p>
           </div>
           <div id="poker-body" class="roundbottom color2 padded hide">
             <p id="deckID" hidden></p>
+            <p id="dealOrDraw" hidden>deal</p>
 
             <!-- poker payouts -->
             <div class="flex flexcolumn color3 whitetext padded rounded">
@@ -231,8 +232,10 @@
                   <p class="righttext">4 of a Kind - $125</p>
                   <p class="righttext">Straight Flush - $250</p>
                 </div>
+                <div class="flex flexcenter">
+                  <p class="centertext lilshadow h3text">Royal Flush - $2000</p>
+                </div>
               </div>
-              <p class="centertext lilshadow h4text">Royal Flush - $2000</p>
             </div>
 
             <!-- poker chips -->
@@ -245,27 +248,27 @@
             <div class="flex flexrow flexspaced padded bottommargin center">
               <div id="card1" class="flex flexcolumn">
                 <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button class="button pointer nooutline noborder color5 rounded width10 whitetext">Hold</button>
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold">Hold</button>
               </div>
               <div id="card2" class="flex flexcolumn">
                 <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button class="button pointer nooutline noborder color5 rounded width10 whitetext">Hold</button>
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold">Hold</button>
               </div>
               <div id="card3" class="flex flexcolumn">
                 <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button class="button pointer nooutline noborder color5 rounded width10 whitetext">Hold</button>
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold">Hold</button>
               </div>
               <div id="card4" class="flex flexcolumn">
                 <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button class="button pointer nooutline noborder color5 rounded width10 whitetext">Hold</button>
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold">Hold</button>
               </div>
               <div id="card5" class="flex flexcolumn">
                 <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button class="button pointer nooutline noborder color5 rounded width10 whitetext">Hold</button>
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold">Hold</button>
               </div>
             </div>
             <div class="width20 center">
-              <button id="deal-draw" class="button pointer nooutline noborder color3 rounded whitetext fullwidth h4text">Deal</button>
+              <button id="dealDrawButton" class="button pointer nooutline noborder color3 rounded whitetext fullwidth h4text">Deal / Draw</button>
             </div>
           </div>
 
