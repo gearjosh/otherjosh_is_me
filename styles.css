@@ -37,10 +37,19 @@ li {
   justify-content: flex-end;
 }
 
+.flexcenter {
+  justify-content: center;
+  align-items: center;
+}
+
 /* Text Options */
 
 .whitetext {
   color: aliceblue;
+}
+
+.bluetext {
+  color: #124EA4;
 }
 
 .greytext {
@@ -236,6 +245,10 @@ li {
 
 /* Static Colors */
 
+.blue {
+  background-color: #124EA4;
+}
+
 .white {
   background-color: aliceblue;
 }
@@ -399,6 +412,10 @@ li {
   object-fit: contain;
 }
 
+.bw {
+  filter: grayscale(1)
+}
+
 /* Transformations */
 
 .flip {
@@ -472,4 +489,12 @@ li {
 .pixelgrid {
   width: 50vw;
   margin: 1rem auto 0 auto;
+}
+
+.chip {
+  background-image: url("./img/chip.png");
+  background-size: cover;
+  background-position: center;
+  width: 5vw;
+  height: 5vw;
 }

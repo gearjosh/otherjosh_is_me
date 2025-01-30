@@ -1,7 +1,7 @@
 // utility functions
 
 const expandBody = function (idString) {
-  const headID = "#" + idString
+  const headID = "#" + idString;
   const bodyID = "#" + idString.split("-")[0] + "-body";
   $(bodyID).toggle();
   $(headID).children().eq(0).children().eq(1).toggleClass("flip");
@@ -27,7 +27,7 @@ const getDeck = async function () {
     "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
   );
   const json = await response.json();
-  $("#deckID").text(json.deck_id)
+  $("#deckID").text(json.deck_id);
 };
 
 const drawCards = async function (num) {
@@ -36,7 +36,6 @@ const drawCards = async function (num) {
     `https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=${num}`
   );
   const json = await response.json();
-
 };
 
 const shuffleDeck = async function (deckID) {
@@ -44,26 +43,25 @@ const shuffleDeck = async function (deckID) {
     `https://deckofcardsapi.com/api/deck/${deckID}/shuffle/`
   );
   const json = await response.json();
-
-}
+};
 
 const getDadJoke = async function () {
   const response = await fetch("https://icanhazdadjoke.com/", {
     headers: {
-      "Accept": "application/json",
+      Accept: "application/json",
       "User-Agent": "otherjosh-is-me 1.0.0 Personal Website",
-    }
-  })
+    },
+  });
 
-  const json = await response.json()
-  $("#dadJoke").text(json.joke)
-}
+  const json = await response.json();
+  $("#dadJoke").text(json.joke);
+};
 
 // event listeners
 
-$('.coolstuff').click(function () {
-  expandBody($(this).attr('id'))
-})
+$(".coolstuff").click(function () {
+  expandBody($(this).attr("id"));
+});
 
 $("#pixelDimensions").submit(function (event) {
   event.preventDefault();
@@ -80,18 +78,18 @@ $("#pixelDimensions").submit(function (event) {
     width: pixelSize,
   });
   $("#pixelMaker").show();
-  $(this).trigger('reset');
+  $(this).trigger("reset");
 });
 
 $(".palette").click(function () {
   $(".palette").removeClass("grow");
-  $(this).addClass("grow")
+  $(this).addClass("grow");
 });
 
 $(".pixelgrid").on("click", "div", function () {
   const color = $(".grow").css("background-color");
   $(this).css({
-    "background-color": color
+    "background-color": color,
   });
 });
 
@@ -102,9 +100,16 @@ $(".colorchange").click(function () {
   if (theme == "mono") {
     $(".greytext").css("color", "#BFAE99");
     $(".header > h1, .header > h4").css("color", "#B7A692");
+    $(".whitetext").css("color", "aliceblue");
+    $("#me").addClass("bw");
+  } else if (theme == "pastel") {
+    $(".whitetext").css("color", "lightcyan");
+    $("#me").removeClass("bw");
   } else {
     $(".greytext").css("color", "#505050");
     $(".header > h1, .header > h4").css("color", "aliceblue");
+    $(".whitetext").css("color", "aliceblue");
+    $("#me").removeClass("bw");
   }
 
   for (let i = 1; i <= 5; i++) {

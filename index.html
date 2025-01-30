@@ -17,7 +17,7 @@
         <h4 class="whitetext h4text lilshadow">
           Software Developer<br/>
           Polymath Nerd<br/>
-          Movie Review Writer<br/>
+          Movie Reviewer<br/>
           Experimental Music Maker<br/>
           Insatiable Artist<br/>
           Good Cook<br/>
@@ -28,7 +28,7 @@
       <div class="flex flexrow">
         <!-- sidebar -->
         <div class="sidebar flex flexcolumn padded color3 rounded topmargin rightmargin">
-          <img class="imgfit rounded" title="A photo of otherjosh with tiny flowers in his beard" src="img/otherjosh.jpg" alt="A photo of otherjosh with tiny flowers in his beard">
+          <img id="me" class="imgfit rounded" title="A photo of otherjosh with tiny flowers in his beard" src="img/otherjosh.jpg" alt="A photo of otherjosh with tiny flowers in his beard">
 
           <a href="https://letterboxd.com/otherjosh/" target="_blank">
             <button class="button pointer nooutline noborder color1 rounded fullwidth whitetext">Read my movie reviews</button>
@@ -220,21 +220,28 @@
             <div class="flex flexcolumn color3 whitetext padded rounded">
               <div class="flex flexrow flexaround">
                 <div class="flex flexcolumn">
-                  <p class="righttext">Pair (Jacks or better) - 5</p>
-                  <p class="righttext">2 Pair - 10</p>
-                  <p class="righttext">3 of a Kind - 15</p>
-                  <p class="righttext">Straight - 20</p>
+                  <p class="righttext">Pair (Jacks or better) - $5</p>
+                  <p class="righttext">2 Pair - $10</p>
+                  <p class="righttext">3 of a Kind - $15</p>
+                  <p class="righttext">Straight - $20</p>
                 </div>
                 <div class="flex flexcolumn">
-                  <p class="righttext">Flush - 25</p>
-                  <p class="righttext">Full House - 40</p>
-                  <p class="righttext">4 of a Kind - 125</p>
-                  <p class="righttext">Straight Flush - 250</p>
+                  <p class="righttext">Flush - $25</p>
+                  <p class="righttext">Full House - $40</p>
+                  <p class="righttext">4 of a Kind - $125</p>
+                  <p class="righttext">Straight Flush - $250</p>
                 </div>
               </div>
-              <p class="centertext lilshadow h4text">Royal Flush - 2000</p>
+              <p class="centertext lilshadow h4text">Royal Flush - $2000</p>
             </div>
-            <!-- play space -->
+
+            <!-- poker chips -->
+            <div class="flex flexrow flexcenter topmargin">
+              <div class="chip circle blue"></div>
+              <p class="h3text bluetext leftmargin">$<span id="chips">100</span></p>
+            </div>
+
+            <!-- poker hand -->
             <div class="flex flexrow flexspaced padded bottommargin center">
               <div id="card1" class="flex flexcolumn">
                 <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
