@@ -29,6 +29,10 @@ li {
   justify-content: space-between;
 }
 
+.flexaround {
+  justify-content: space-around;
+}
+
 .flexend {
   justify-content: flex-end;
 }
@@ -66,6 +70,10 @@ li {
 
 .centertext {
   text-align: center;
+}
+
+.righttext {
+  text-align: right;
 }
 
 /* Shadows */
@@ -372,6 +380,10 @@ li {
 
 .width10 {
   width: 10vw;
+}
+
+.width20 {
+  width: 20vw;
 }
 
 .fullwidth {

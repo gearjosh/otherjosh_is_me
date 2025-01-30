@@ -214,7 +214,52 @@
             <p class="greytext">Play video poker, based off the classic Radica Video Poker LCD game.</p>
           </div>
           <div id="poker-body" class="roundbottom color2 padded hide">
-            Under construction... 👷
+            <p id="deckID" hidden></p>
+
+            <!-- poker payouts -->
+            <div class="flex flexcolumn color3 whitetext padded rounded">
+              <div class="flex flexrow flexaround">
+                <div class="flex flexcolumn">
+                  <p class="righttext">Pair (Jacks or better) - 5</p>
+                  <p class="righttext">2 Pair - 10</p>
+                  <p class="righttext">3 of a Kind - 15</p>
+                  <p class="righttext">Straight - 20</p>
+                </div>
+                <div class="flex flexcolumn">
+                  <p class="righttext">Flush - 25</p>
+                  <p class="righttext">Full House - 40</p>
+                  <p class="righttext">4 of a Kind - 125</p>
+                  <p class="righttext">Straight Flush - 250</p>
+                </div>
+              </div>
+              <p class="centertext lilshadow h4text">Royal Flush - 2000</p>
+            </div>
+            <!-- play space -->
+            <div class="flex flexrow flexspaced padded bottommargin center">
+              <div id="card1" class="flex flexcolumn">
+                <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext">Hold</button>
+              </div>
+              <div id="card2" class="flex flexcolumn">
+                <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext">Hold</button>
+              </div>
+              <div id="card3" class="flex flexcolumn">
+                <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext">Hold</button>
+              </div>
+              <div id="card4" class="flex flexcolumn">
+                <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext">Hold</button>
+              </div>
+              <div id="card5" class="flex flexcolumn">
+                <img class="imgfit width10" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext">Hold</button>
+              </div>
+            </div>
+            <div class="width20 center">
+              <button id="deal-draw" class="button pointer nooutline noborder color3 rounded whitetext fullwidth h4text">Deal</button>
+            </div>
           </div>
 
           <!-- memem maker -->

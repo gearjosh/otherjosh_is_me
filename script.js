@@ -22,6 +22,31 @@ const createGrid = function (width, height) {
   return pixelGrid;
 };
 
+const getDeck = async function () {
+  const response = await fetch(
+    "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
+  );
+  const json = await response.json();
+  $("#deckID").text(json.deck_id)
+};
+
+const drawCards = async function (num) {
+  const deckID = $("#deckID").text();
+  const response = await fetch(
+    `https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=${num}`
+  );
+  const json = await response.json();
+
+};
+
+const shuffleDeck = async function (deckID) {
+  const response = await fetch(
+    `https://deckofcardsapi.com/api/deck/${deckID}/shuffle/`
+  );
+  const json = await response.json();
+
+}
+
 const getDadJoke = async function () {
   const response = await fetch("https://icanhazdadjoke.com/", {
     headers: {
@@ -77,8 +102,6 @@ $(".colorchange").click(function () {
   if (theme == "mono") {
     $(".greytext").css("color", "#BFAE99");
     $(".header > h1, .header > h4").css("color", "#B7A692");
-  } else if (theme == "pastel") {
-    $(".header > h1, .header > h4").css("color", "aliceblue");
   } else {
     $(".greytext").css("color", "#505050");
     $(".header > h1, .header > h4").css("color", "aliceblue");
@@ -106,4 +129,5 @@ $(".colorchange").click(function () {
 });
 
 // Initial Page Load
+getDeck();
 getDadJoke();
