@@ -1,1 +1,2 @@
-# otherjosh_is_me
+# otherjosh is me
+## A personal website by me, otherjosh
