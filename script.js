@@ -77,6 +77,8 @@ $(".colorchange").click(function () {
   if (theme == "mono") {
     $(".greytext").css("color", "#BFAE99");
     $(".header > h1, .header > h4").css("color", "#B7A692");
+  } else if (theme == "pastel") {
+    $(".header > h1, .header > h4").css("color", "aliceblue");
   } else {
     $(".greytext").css("color", "#505050");
     $(".header > h1, .header > h4").css("color", "aliceblue");
