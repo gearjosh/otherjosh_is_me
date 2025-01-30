@@ -44,7 +44,8 @@ li {
 }
 
 .h1text {
-  font-size: 4rem;
+  font-size: 5rem;
+  font-family: morris_romanbold;
 }
 
 .h2text {
@@ -61,6 +62,10 @@ li {
 
 .liltext {
   font-size: 66%;
+}
+
+.centertext {
+  text-align: center;
 }
 
 /* Shadows */
@@ -227,6 +232,10 @@ li {
   background-color: aliceblue;
 }
 
+.transparent {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 /* Pixel Palette */
 
 .palette {
@@ -298,12 +307,7 @@ li {
   background-color: #000000;
 }
 
-/* Color Change Formatting */
-
-.colorswatch {
-  width: 2.5rem;
-  height: 2.5rem;
-}
+/* Formatting & Layout */
 
 .rounded {
   border-radius: .25rem;
@@ -333,12 +337,20 @@ li {
   margin-top: 1rem;
 }
 
+.bottommargin {
+  margin-bottom: 1rem;
+}
+
 .rightmargin {
   margin-right: 1rem;
 }
 
 .leftmargin {
   margin-left: 1rem;
+}
+
+.center {
+  margin: 0 auto;
 }
 
 .nooutline {
@@ -370,6 +382,13 @@ li {
   display: none;
 }
 
+.imgfit {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Transformations */
+
 .flip {
   transform: rotate(180deg);
 }
@@ -378,20 +397,7 @@ li {
   transform: scale(125%);
 }
 
-.pixelgrid {
-  width: 50vw;
-  margin: 1rem auto 0 auto;
-}
-
-.pixel {
-  background-color: white;
-  outline: 1px solid lightgrey;
-}
-
-.imgfit {
-  max-width: 100%;
-  object-fit: contain;
-}
+/* Repeated Elements */
 
 .button {
   height: 2.5rem;
@@ -406,6 +412,18 @@ li {
   transform: translateY(0.125rem);
   box-shadow: none;
 }
+
+.colorswatch {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.pixel {
+  background-color: white;
+  outline: 1px solid lightgrey;
+}
+
+/* One-offs */
 
 .header {
   background-image: url("./img/dnd-header.png");
@@ -423,7 +441,6 @@ li {
   background-position: center;
   height: 45rem;
   max-height: 100%;
-  outline: red;
 }
 
 .container {
@@ -438,4 +455,9 @@ li {
 
 .main {
   width: 75%;
+}
+
+.pixelgrid {
+  width: 50vw;
+  margin: 1rem auto 0 auto;
 }

@@ -22,6 +22,18 @@ const createGrid = function (width, height) {
   return pixelGrid;
 };
 
+const getDadJoke = async function () {
+  const response = await fetch("https://icanhazdadjoke.com/", {
+    headers: {
+      "Accept": "application/json",
+      "User-Agent": "otherjosh-is-me 1.0.0 Personal Website",
+    }
+  })
+
+  const json = await response.json()
+  $("#dadJoke").text(json.joke)
+}
+
 // event listeners
 
 $('.coolstuff').click(function () {
@@ -64,8 +76,10 @@ $(".colorchange").click(function () {
 
   if (theme == "mono") {
     $(".greytext").css("color", "#BFAE99");
+    $(".header > h1, .header > h4").css("color", "#B7A692");
   } else {
     $(".greytext").css("color", "#505050");
+    $(".header > h1, .header > h4").css("color", "aliceblue");
   }
 
   for (let i = 1; i <= 5; i++) {
@@ -88,3 +102,6 @@ $(".colorchange").click(function () {
     "text-shadow": themes[4] + " 0 .0625rem",
   });
 });
+
+// Initial Page Load
+getDadJoke();
