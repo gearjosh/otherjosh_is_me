@@ -2,6 +2,7 @@
 ## A personal website by me, otherjosh
 
 ### To-Do List
+- [ ] build poker UI functionality
 - [ ] create mobile breakpoints
 - [x] add b&w filter for sidebar image on mono theme
 - [ ] get buttons to only go down on click
