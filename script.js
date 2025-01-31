@@ -30,9 +30,18 @@ const getDeck = async function () {
   $("#deckID").text(json.deck_id);
 };
 
+const getEmptyCardSlots = function () {
+  const cardSlots = ["1", "2", "3", "4", "5"]
+  const cardsHeld = $("#dealOrDraw").text().split("");
+  const emptyCardSlots = cardSlots.filter(val => !cardsHeld.has(val));
+  return emptyCardSlots;
+}
+
 const drawCards = async function () {
   const deckID = $("#deckID").text();
   const dealOrDraw = $("#dealOrDraw").text();
+  const emptyCardSlots = getEmptyCardSlots();
+
   let num = NaN;
   if (dealOrDraw == "deal") {
     num = 5;
@@ -49,9 +58,11 @@ const drawCards = async function () {
     console.log("json: ", json);
 
     const cards = json.cards;
+
     for (let i = 0; i < cards.length; i++) {
       const card = cards[i];
-      $("#card" + i + " > img").attr({
+      const slot = emptyCardSlots[i];
+      $("#card" + slot + " > img").attr({
         src: card.image,
         alt: card.value + " of " + card.suit,
         "data-code": card.code,
@@ -79,7 +90,9 @@ const getCardValues = function (cardArray) {
     } else if (val == "Q") {
       val = 12;
     } else if (val == "J") {
-      val == 11;
+      val = 11;
+    } else if (val = "0") {
+      val = 10
     } else {
       val = Number(val);
     }
@@ -99,13 +112,13 @@ const checkStraight = function (valArray) {
     if (valArray.every((val, i) => val == lowStraight[i])) {
       return true;
     }
-    for (let i = 1; i < valArray.length; i++) {
-      if (valArray[i] != valArray[i - 1] - 1) {
-        return false;
-      }
-    }
-    return true;
   }
+  for (let i = 1; i < valArray.length; i++) {
+    if (valArray[i] != valArray[i - 1] - 1) {
+      return false;
+    }
+  }
+  return true;
 };
 
 const checkFullHouse = function (valArray) {
@@ -335,6 +348,8 @@ $(".hold").click(function () {
     $("#dealOrDraw").text(cardsHeld);
   }
 });
+
+//draw/deal button logic here
 
 // Initial Page Load
 getDeck();
