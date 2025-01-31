@@ -30,12 +30,202 @@ const getDeck = async function () {
   $("#deckID").text(json.deck_id);
 };
 
-const drawCards = async function (num) {
+const drawCards = async function () {
   const deckID = $("#deckID").text();
-  const response = await fetch(
-    `https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=${num}`
-  );
-  const json = await response.json();
+  const dealOrDraw = $("#dealOrDraw").text();
+  let num = NaN;
+  if (dealOrDraw == "deal") {
+    num = 5;
+    $("#dealOrDraw").text("");
+  } else {
+    num = 5 - $("#dealOrDraw").text().length;
+    $("#dealOrDraw").text("deal");
+  }
+  if (num > 0) {
+    const response = await fetch(
+      `https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=${num}`
+    );
+    const json = await response.json();
+    console.log("json: ", json);
+
+    const cards = json.cards;
+    for (let i = 0; i < cards.length; i++) {
+      const card = cards[i];
+      $("#card" + i + " > img").attr({
+        src: card.image,
+        alt: card.value + " of " + card.suit,
+        "data-code": card.code,
+      });
+    }
+  }
+};
+
+const getCardSuits = function (cardArray) {
+  const suits = [];
+  for (let i = 0; i < cardArray.length; i++) {
+    suits.push(cardArray[i].suit);
+  }
+  return suits;
+};
+
+const getCardValues = function (cardArray) {
+  const values = [];
+  for (let i = 0; i < cardArray.length; i++) {
+    let val = cardArray[i].value;
+    if (val == "A") {
+      val = 14;
+    } else if (val == "K") {
+      val = 13;
+    } else if (val == "Q") {
+      val = 12;
+    } else if (val == "J") {
+      val == 11;
+    } else {
+      val = Number(val);
+    }
+    values.push(val);
+  }
+  values.sort((a, b) => b - a);
+  return values;
+};
+
+const checkFlush = function (suitArray) {
+  return new Set(suitArray).size == 1;
+};
+
+const checkStraight = function (valArray) {
+  if (valArray[0] == 14) {
+    const lowStraight = [14, 5, 4, 3, 2];
+    if (valArray.every((val, i) => val == lowStraight[i])) {
+      return true;
+    }
+    for (let i = 1; i < valArray.length; i++) {
+      if (valArray[i] != valArray[i - 1] - 1) {
+        return false;
+      }
+    }
+    return true;
+  }
+};
+
+const checkFullHouse = function (valArray) {
+  const valCounts = {};
+  let hasThree = false;
+  let hasPair = false;
+  for (const val of valArray) {
+    valCounts[val] = (valCounts[val] || 0) + 1;
+  }
+  for (const val in valCounts) {
+    if (valCounts[val] == 3) {
+      hasThree = true;
+    } else if (valCounts[val] == 2) {
+      hasPair = true;
+    }
+  }
+  return hasThree && hasPair;
+};
+
+const checkFourOfKind = function (valArray) {
+  const valCounts = {};
+  let hasFour = false;
+  for (const val of valArray) {
+    valCounts[val] = (valCounts[val] || 0) + 1;
+  }
+  for (const val in valCounts) {
+    if (valCounts[val] == 4) {
+      hasFour = true;
+    }
+  }
+  return hasFour;
+};
+
+const checkThreeOfKind = function (valArray) {
+  const valCounts = {};
+  let hasThree = false;
+  for (const val of valArray) {
+    valCounts[val] = (valCounts[val] || 0) + 1;
+  }
+  for (const val in valCounts) {
+    if (valCounts[val] == 3) {
+      hasThree = true;
+    }
+  }
+  return hasThree;
+};
+
+const checkTwoPair = function (valArray) {
+  const valCounts = {};
+  let hasTwoPair = false;
+  let pairCount = 0;
+  for (const val of valArray) {
+    if (val > 10) {
+      valCounts[val] = (valCounts[val] || 0) + 1;
+    }
+  }
+  for (const val in valCounts) {
+    if (valCounts[val] == 2) {
+      pairCount += 1;
+    }
+  }
+  return pairCount > 1;
+};
+
+const checkPair = function (valArray) {
+  const valCounts = {};
+  let hasPair = false;
+  for (const val of valArray) {
+    if (val > 10) {
+      valCounts[val] = (valCounts[val] || 0) + 1;
+    }
+  }
+  for (const val in valCounts) {
+    if (valCounts[val] == 2) {
+      hasPair = true;
+    }
+  }
+  return hasPair;
+};
+
+const getHand = function () {
+  const cards = [];
+
+  for (let i = 1; i <= 5; i++) {
+    const string = $("#card" + i + " > img").attr("data-code");
+    const stringArray = string.split("");
+    const card = {
+      value: stringArray[0],
+      suit: stringArray[1],
+    };
+    cards.push(card);
+  }
+  return cards;
+};
+
+const scoreHand = function (cards) {
+  let score = 0;
+  // royal flush
+  if (checkFlush(cards) && checkStraight(cards)) {
+    if (cards[-1] == 10) {
+      score = 2000;
+    } else {
+      score = 250;
+    }
+  } else if (checkFourOfKind(cards)) {
+    score = 125;
+  } else if (checkFullHouse(cards)) {
+    score = 40;
+  } else if (checkFlush(cards)) {
+    score = 25;
+  } else if (checkStraight(cards)) {
+    score = 20;
+  } else if (checkThreeOfKind(cards)) {
+    score = 15;
+  } else if (checkTwoPair(cards)) {
+    score = 10;
+  } else if (checkPair(cards)) {
+    score = 5;
+  }
+  return score;
 };
 
 const shuffleDeck = async function (deckID) {
@@ -57,7 +247,7 @@ const getDadJoke = async function () {
   $("#dadJoke").text(json.joke);
 };
 
-// event listeners
+// click/event listeners
 
 $(".coolstuff").click(function () {
   expandBody($(this).attr("id"));
@@ -103,7 +293,10 @@ $(".colorchange").click(function () {
     $(".whitetext").css("color", "aliceblue");
     $("#me").addClass("bw");
   } else if (theme == "pastel") {
-    $(".whitetext").css("color", "lightcyan");
+    $(".greytext").css("color", "#505050");
+    $(".whitetext").css("color", "darkmagenta");
+    $(".header > h1, .header > h4").css("color", "lightcyan");
+    $(".footer p").css("color", "lightcyan");
     $("#me").removeClass("bw");
   } else {
     $(".greytext").css("color", "#505050");
@@ -131,6 +324,15 @@ $(".colorchange").click(function () {
   $(".lilshadow").css({
     "text-shadow": themes[4] + " 0 .0625rem",
   });
+});
+
+$(".hold").click(function () {
+  if ($("#dealOrDraw").text() != "deal") {
+    const cardID = $(this).parent().attr("id").slice(-1);
+    let cardsHeld = $("#dealOrDraw").text();
+    cardsHeld += cardID;
+    $("#dealOrDraw").text(cardsHeld);
+  }
 });
 
 // Initial Page Load
