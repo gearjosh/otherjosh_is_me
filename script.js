@@ -33,7 +33,7 @@ const getDeck = async function () {
 const getEmptyCardSlots = function () {
   const cardSlots = ["1", "2", "3", "4", "5"]
   const cardsHeld = $("#dealOrDraw").text().split("");
-  const emptyCardSlots = cardSlots.filter(val => !cardsHeld.has(val));
+  const emptyCardSlots = cardSlots.filter(val => !cardsHeld.includes(val));
   return emptyCardSlots;
 }
 
@@ -55,8 +55,6 @@ const drawCards = async function () {
       `https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=${num}`
     );
     const json = await response.json();
-    console.log("json: ", json);
-
     const cards = json.cards;
 
     for (let i = 0; i < cards.length; i++) {
