@@ -203,26 +203,27 @@ const getHand = function () {
 
 const scoreHand = function (cards) {
   let score = 0;
-  // royal flush
-  if (checkFlush(cards) && checkStraight(cards)) {
-    if (cards[-1] == 10) {
+  const suits = getCardSuits(cards);
+  const vals = getCardValues(cards)
+  if (checkFlush(suits) && checkStraight(vals)) {
+    if (vals[-1] == 10) {
       score = 2000;
     } else {
       score = 250;
     }
-  } else if (checkFourOfKind(cards)) {
+  } else if (checkFourOfKind(vals)) {
     score = 125;
-  } else if (checkFullHouse(cards)) {
+  } else if (checkFullHouse(vals)) {
     score = 40;
-  } else if (checkFlush(cards)) {
+  } else if (checkFlush(suits)) {
     score = 25;
-  } else if (checkStraight(cards)) {
+  } else if (checkStraight(vals)) {
     score = 20;
-  } else if (checkThreeOfKind(cards)) {
+  } else if (checkThreeOfKind(vals)) {
     score = 15;
-  } else if (checkTwoPair(cards)) {
+  } else if (checkTwoPair(vals)) {
     score = 10;
-  } else if (checkPair(cards)) {
+  } else if (checkPair(vals)) {
     score = 5;
   }
   return score;
