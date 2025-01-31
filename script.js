@@ -31,11 +31,11 @@ const getDeck = async function () {
 };
 
 const getEmptyCardSlots = function () {
-  const cardSlots = ["1", "2", "3", "4", "5"]
+  const cardSlots = ["1", "2", "3", "4", "5"];
   const cardsHeld = $("#dealOrDraw").text().split("");
-  const emptyCardSlots = cardSlots.filter(val => !cardsHeld.includes(val));
+  const emptyCardSlots = cardSlots.filter((val) => !cardsHeld.includes(val));
   return emptyCardSlots;
-}
+};
 
 const drawCards = async function () {
   const deckID = $("#deckID").text();
@@ -45,10 +45,8 @@ const drawCards = async function () {
   let num = NaN;
   if (dealOrDraw == "deal") {
     num = 5;
-    $("#dealOrDraw").text("");
   } else {
     num = 5 - $("#dealOrDraw").text().length;
-    $("#dealOrDraw").text("deal");
   }
   if (num > 0) {
     const response = await fetch(
@@ -66,6 +64,12 @@ const drawCards = async function () {
         "data-code": card.code,
       });
     }
+  }
+  if (dealOrDraw == "deal") {
+    $("#dealOrDraw").text("");
+  } else {
+    $("#dealOrDraw").text("deal");
+    scoreHand(getHand());
   }
 };
 
@@ -89,10 +93,11 @@ const getCardValues = function (cardArray) {
       val = 12;
     } else if (val == "J") {
       val = 11;
-    } else if (val = "0") {
-      val = 10
     } else {
       val = Number(val);
+    }
+    if (val == 0) {
+      val = 10;
     }
     values.push(val);
   }
@@ -166,12 +171,9 @@ const checkThreeOfKind = function (valArray) {
 
 const checkTwoPair = function (valArray) {
   const valCounts = {};
-  let hasTwoPair = false;
   let pairCount = 0;
   for (const val of valArray) {
-    if (val > 10) {
-      valCounts[val] = (valCounts[val] || 0) + 1;
-    }
+    valCounts[val] = (valCounts[val] || 0) + 1;
   }
   for (const val in valCounts) {
     if (valCounts[val] == 2) {
@@ -199,9 +201,8 @@ const checkPair = function (valArray) {
 
 const getHand = function () {
   const cards = [];
-
   for (let i = 1; i <= 5; i++) {
-    const string = $("#card" + i + " > img").attr("data-code");
+    const string = $("#card" + i + " > img").attr("data-code") || "";
     const stringArray = string.split("");
     const card = {
       value: stringArray[0],
@@ -212,10 +213,47 @@ const getHand = function () {
   return cards;
 };
 
+const resetChips = function () {
+  $("#chips").text("100");
+};
+
+const updateChips = function (num) {
+  let chips = Number($("#chips").text());
+  let delay = 250;
+  if (num == 2000) {
+    delay = 25;
+  } else if (num >= 125) {
+    delay = 100;
+  }
+  if (num > 0) {
+    $("#dealDrawButton").addClass("unclickable");
+    let left = num;
+    let interval = setInterval(function () {
+      if (left > 0) {
+        chips += 5;
+        left -= 5;
+        $("#chips").text(chips);
+      } else {
+        $("#" + num).removeClass("glow");
+        $("#dealDrawButton").removeClass("unclickable");
+        clearInterval(interval);
+        interval = null;
+      }
+    }, delay);
+    interval;
+  } else {
+    chips += num;
+    $("#chips").text(chips);
+  }
+};
+
 const scoreHand = function (cards) {
+  console.log("cards: ", cards);
   let score = 0;
   const suits = getCardSuits(cards);
-  const vals = getCardValues(cards)
+  const vals = getCardValues(cards);
+  console.log("suits: ", suits);
+  console.log("vals: ", vals);
   if (checkFlush(suits) && checkStraight(vals)) {
     if (vals[-1] == 10) {
       score = 2000;
@@ -237,14 +275,27 @@ const scoreHand = function (cards) {
   } else if (checkPair(vals)) {
     score = 5;
   }
-  return score;
+  if (score > 0) {
+    if (score == 2000) {
+      $("#payouts").addClass("jackpot");
+    }
+    updateChips(score);
+    const hand = $("#" + score).text();
+    $("#hand").text(hand);
+  } else {
+    if (Number($("#chips").text()) < 5) {
+      $("#hand").text("Oh no! You're out of money. Want to play again?");
+      $("#dealDrawButton").text("Start New Game");
+    } else {
+      $("#hand").text("Bad luck. Try again.");
+    }
+  }
 };
 
 const shuffleDeck = async function (deckID) {
   const response = await fetch(
     `https://deckofcardsapi.com/api/deck/${deckID}/shuffle/`
   );
-  const json = await response.json();
 };
 
 const getDadJoke = async function () {
@@ -342,12 +393,55 @@ $(".hold").click(function () {
   if ($("#dealOrDraw").text() != "deal") {
     const cardID = $(this).parent().attr("id").slice(-1);
     let cardsHeld = $("#dealOrDraw").text();
-    cardsHeld += cardID;
-    $("#dealOrDraw").text(cardsHeld);
+    if ($(this).text() != "Held") {
+      cardsHeld += cardID;
+      $("#dealOrDraw").text(cardsHeld);
+      $(this).parent().children(1).addClass("glow");
+      $(this).text("Held");
+    } else {
+      const cardArray = cardsHeld.split("");
+      const newCardsHeld = cardArray.filter((val) => val != cardID).join("");
+      $("#dealOrDraw").text(newCardsHeld);
+      $(this).parent().children(1).removeClass("glow");
+      $(this).text("Hold");
+    }
   }
 });
 
-//draw/deal button logic here
+// things are firing in the wrong order
+$("#dealDrawButton").click(function () {
+  if ($(this).text() == "Start New Game") {
+    for (let i = 1; i <= 5; i++) {
+      $("#card" + i + " > img").attr({
+        src: "https://deckofcardsapi.com/static/img/back.png",
+        alt: "the back of a playing card",
+        "data-code": "",
+      });
+      $("#hand").text("");
+    }
+    resetChips();
+    shuffleDeck($("#deckID").text());
+    $(this).text("Deal");
+  } else if ($(this).text() == "Draw") {
+    $(".hold").parent().children(1).removeClass("glow");
+    $(".hold").text("Hold");
+    drawCards();
+    $(this).text("Deal");
+  } else if ($(this).text() == "Deal") {
+    $("#hand").text("");
+    updateChips(-5);
+    shuffleDeck($("#deckID").text());
+    drawCards();
+    $(this).text("Draw");
+  } else {
+    alert(
+      "Something went wrong with Video Poker. Refresh the page and try again."
+    );
+  }
+  if ($("#payouts").hasClass("jackpot")) {
+    $("#payouts").removeClass("jackpot");
+  }
+});
 
 // Initial Page Load
 getDeck();

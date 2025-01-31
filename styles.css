@@ -346,6 +346,10 @@ li {
   border-radius: 50%;
 }
 
+.morerounded {
+  border-radius: .5rem;
+}
+
 .padded {
   padding: 1rem;
 }
@@ -403,6 +407,10 @@ li {
   width: 100%;
 }
 
+.height1 {
+  height: 1rem;
+}
+
 .hide {
   display: none;
 }
@@ -416,6 +424,15 @@ li {
   filter: grayscale(1)
 }
 
+.glow {
+  box-shadow: 0 0 1rem .5rem aliceblue;
+  /* contain: paint; */
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
 /* Transformations */
 
 .flip {
@@ -424,6 +441,10 @@ li {
 
 .grow {
   transform: scale(125%);
+}
+
+.jackpot {
+  animation: jackpot 0.6s infinite both;
 }
 
 /* Repeated Elements */
@@ -435,8 +456,11 @@ li {
   transition: transform 200ms;
 }
 
+.button:hover {
+  font-weight: bold;
+}
+
 .button.active,
-.button:hover,
 .button:focus {
   transform: translateY(0.125rem);
   box-shadow: none;
@@ -479,11 +503,11 @@ li {
 }
 
 .sidebar {
-  width: 25%;
+  width: 20%;
 }
 
 .main {
-  width: 75%;
+  width: 80%;
 }
 
 .pixelgrid {
@@ -497,4 +521,18 @@ li {
   background-position: center;
   width: 5vw;
   height: 5vw;
+}
+
+/* Animation Keyframes */
+
+@keyframes jackpot {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
