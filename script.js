@@ -324,13 +324,14 @@ $("#pixelDimensions").submit(function (event) {
   const h = values[0].value;
   const pixelSize = 50 / Number(w) + "vw";
   const grid = createGrid(w, h);
-
-  $("#pixelGrid").html(grid);
-  $(".pixel").css({
-    height: pixelSize,
-    width: pixelSize,
-  });
-  $("#pixelMaker").show();
+  if (w && h) {
+    $("#pixelGrid").html(grid);
+    $(".pixel").css({
+      height: pixelSize,
+      width: pixelSize,
+    });
+    $("#pixelMaker").show();
+  }
   $(this).trigger("reset");
 });
 

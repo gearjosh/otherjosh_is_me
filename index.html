@@ -53,83 +53,7 @@
 
         <!-- main -->
         <div class="main padded rounded color4 topmargin">
-          <h2 class="h2text whitetext mediumshadow">Cool Stuff Made By Me</h2>
-
-          <!-- walker treker -->
-          <div id="walkertreker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
-            <div class="flex flexrow flexspaced">
-              <h3 class="whitetext mediumshadow h3text">Walker Treker Alpha Build</h3>
-              <p class="whitetext h3text">&#9650;</p>
-            </div>
-            <p class="greytext">A React Native app where I built all the frontend.</p>
-          </div>
-          <div id="walkertreker-body" class="roundbottom color2 padded hide">
-            <p>
-              Walker Treker is a social walking game developed in React Native for iOS and Android. I was lucky enough to co-build the very first version with one other developer. The app uses Redux with React to dispatch actions, and the Google Fit API to access the phones pedometer. I was responsible for developing all the frontend code, and my co-developer was responsible for all the backend code. We developed the first version of the game in seven weeks. Two subsequent teams have iterated on our original alpha version.
-            </p>
-            <br/>
-            <p>
-              The conceit of the game is this: you and your friends are being pursued by zombies, and you all must take enough steps every day to make it to a safehouse and escape from the undead horde. Here are some of the features of the game:
-            </p>
-            <br/>
-            <ul>
-              <li><b>Character creation:</b> each player is assigned a unique token to ensure a specific phone is tied to a specific player.</li>
-              <li><b>Campaign settings:</b> the player who starts the game can choose the difficulty, which will determine how many steps each player must take per day to get to the safehouse.</li>
-              <li><b>Player invites:</b> the player who starts the game can invite friends from their phone's contacts via text messages. These texts have contain a unique link to join the specific campaign. Two players are required but the game can take up to five.</li>
-              <li><b>Power-ups:</b> if players make it to the safehouse with extra steps, they can spend those steps to scavenge for useful items that will aid their team.</li>
-              <li><b>Health and hunger:</b> each player has a hunger level (that increases every hour) and a health level which is reduced by random events or if the player is caught by zombies.</li>
-              <li><b>Random events:</b> at least once per day (potentially multiple time) random events are pushed to the players as notifications. The higher the difficulty level, the more random events occur. Players vote on how to handle the random events and the app responds according to the vote.</li>
-              <li><b>Account recovery:</b> if a player loses access to their account, they're able to recover their account through the app.</li>
-            </ul>
-            <br/>
-            <p>
-              <a href="https://github.com/eyecuelab/walkertreker" target="_blank">You can view the code for the app here.</a>
-            </p>
-            <br/>
-            <p>
-              <a href="https://github.com/eyecuelab/walkertreker/wiki" target="_blank">You can read up on the app here, on its wiki.</a> If you're interested in playing the game, this is where you should go to learn how to download and install it.
-            </p>
-          </div>
-
-          <!-- pixelart -->
-          <div id="pixelart-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
-            <div class="flex flexrow flexspaced">
-              <h3 class="whitetext mediumshadow h3text">Pixel Art Maker</h3>
-              <p class="whitetext h3text">&#9650;</p>
-            </div>
-            <p class="greytext">A cool little web app to make pixel art.</p>
-          </div>
-          <div id="pixelart-body" class="roundbottom color2 padded hide">
-            <form id="pixelDimensions" class="flex flexcolumn">
-              <label class="lilbottommargin" for="pixelHeight">Height</label>
-              <input id="pixelHeight" name="pixel art height" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Tall" />
-              <label class="lilbottommargin" for="pixelWidth">Width</label>
-              <input id="pixelWidth" name="pixel art width" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Across" />
-              <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width10">Generate Pixel Grid</button>
-            </form>
-            <div id="pixelMaker" class="hide">
-              <p class="topmargin"><i>Choose a color below. Then click a square to color it in.</i></p>
-              <div class="flex flexrow flexspaced topmargin">
-                <div class="palette palette0 circle pointer grow"></div>
-                <div class="palette palette1 circle pointer"></div>
-                <div class="palette palette2 circle pointer"></div>
-                <div class="palette palette3 circle pointer"></div>
-                <div class="palette palette4 circle pointer"></div>
-                <div class="palette palette5 circle pointer"></div>
-                <div class="palette palette6 circle pointer"></div>
-                <div class="palette palette7 circle pointer"></div>
-                <div class="palette palette8 circle pointer"></div>
-                <div class="palette palette9 circle pointer"></div>
-                <div class="palette palette10 circle pointer"></div>
-                <div class="palette palette11 circle pointer"></div>
-                <div class="palette palette12 circle pointer"></div>
-                <div class="palette palette13 circle pointer"></div>
-                <div class="palette palette14 circle pointer"></div>
-                <div class="palette palette15 circle pointer"></div>
-              </div>
-              <div id="pixelGrid" class="pixelgrid"></div>
-            </div>
-          </div>
+          <h2 class="h2text whitetext mediumshadow">Cool Stuff I've Made</h2>
 
           <!-- colorchange -->
           <div id="colorchange-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
@@ -216,11 +140,11 @@
           <div id="poker-body" class="roundbottom color2 padded hide">
             <p id="deckID" hidden></p>
             <p id="dealOrDraw" hidden>deal</p>
-            <p class="bottommargin"><i>
-              Deal yourself five cards.<br/>
-              Choose the cards you want to hold, and then draw new cards for all the others.<br/>
-              Try to get the highest score you can without losing all your chips, and make sure to have fun!
-            </i></p>
+            <ul class="bottommargin">
+              <li>Deal yourself five cards.</li>
+              <li>Choose the cards you want to hold, and then draw new cards for all the others.</li>
+              <li>Try to get the highest score you can without losing all your chips, and make sure to have fun!</li>
+            </ul>
 
             <!-- poker payouts -->
             <div id="payouts" class="flex flexcolumn color3 whitetext padded rounded">
@@ -284,6 +208,84 @@
             <div class="height1 padded">
               <p id="hand" class="h4text greytext centertext"></p>
             </div>
+          </div>
+
+          <!-- pixelart -->
+          <div id="pixelart-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
+            <div class="flex flexrow flexspaced">
+              <h3 class="whitetext mediumshadow h3text">Pixel Art Maker</h3>
+              <p class="whitetext h3text">&#9650;</p>
+            </div>
+            <p class="greytext">A cool little web app to make pixel art.</p>
+          </div>
+          <div id="pixelart-body" class="roundbottom color2 padded hide">
+            <form id="pixelDimensions" class="flex flexcolumn">
+              <label class="lilbottommargin" for="pixelHeight">Height <span class="liltext">(required)</span></label>
+              <input id="pixelHeight" name="pixel art height" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Tall" required/>
+
+              <label class="lilbottommargin" for="pixelWidth">Width <span class="liltext">(required)</span></label>
+              <input id="pixelWidth" name="pixel art width" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Across" required/>
+
+              <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width10">Generate Pixel Grid</button>
+            </form>
+            <div id="pixelMaker" class="hide">
+              <p class="topmargin"><i>Choose a color below. Then click a square to color it in.</i></p>
+              <div class="flex flexrow flexspaced topmargin">
+                <div class="palette palette0 circle pointer grow"></div>
+                <div class="palette palette1 circle pointer"></div>
+                <div class="palette palette2 circle pointer"></div>
+                <div class="palette palette3 circle pointer"></div>
+                <div class="palette palette4 circle pointer"></div>
+                <div class="palette palette5 circle pointer"></div>
+                <div class="palette palette6 circle pointer"></div>
+                <div class="palette palette7 circle pointer"></div>
+                <div class="palette palette8 circle pointer"></div>
+                <div class="palette palette9 circle pointer"></div>
+                <div class="palette palette10 circle pointer"></div>
+                <div class="palette palette11 circle pointer"></div>
+                <div class="palette palette12 circle pointer"></div>
+                <div class="palette palette13 circle pointer"></div>
+                <div class="palette palette14 circle pointer"></div>
+                <div class="palette palette15 circle pointer"></div>
+              </div>
+              <div id="pixelGrid" class="pixelgrid"></div>
+            </div>
+          </div>
+
+          <!-- walker treker -->
+          <div id="walkertreker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
+            <div class="flex flexrow flexspaced">
+              <h3 class="whitetext mediumshadow h3text">Walker Treker Alpha Build</h3>
+              <p class="whitetext h3text">&#9650;</p>
+            </div>
+            <p class="greytext">A React Native app where I built all the frontend.</p>
+          </div>
+          <div id="walkertreker-body" class="roundbottom color2 padded hide">
+            <p>
+              Walker Treker is a social walking game developed in React Native for iOS and Android. I was lucky enough to co-build the very first version with one other developer. The app uses Redux with React to dispatch actions, and the Google Fit API to access the phones pedometer. I was responsible for developing all the frontend code, and my co-developer was responsible for all the backend code. We developed the first version of the game in seven weeks. Two subsequent teams have iterated on our original alpha version.
+            </p>
+            <br/>
+            <p>
+              The conceit of the game is this: you and your friends are being pursued by zombies, and you all must take enough steps every day to make it to a safehouse and escape from the undead horde. Here are some of the features of the game:
+            </p>
+            <br/>
+            <ul>
+              <li><b>Character creation:</b> each player is assigned a unique token to ensure a specific phone is tied to a specific player.</li>
+              <li><b>Campaign settings:</b> the player who starts the game can choose the difficulty, which will determine how many steps each player must take per day to get to the safehouse.</li>
+              <li><b>Player invites:</b> the player who starts the game can invite friends from their phone's contacts via text messages. These texts have contain a unique link to join the specific campaign. Two players are required but the game can take up to five.</li>
+              <li><b>Power-ups:</b> if players make it to the safehouse with extra steps, they can spend those steps to scavenge for useful items that will aid their team.</li>
+              <li><b>Health and hunger:</b> each player has a hunger level (that increases every hour) and a health level which is reduced by random events or if the player is caught by zombies.</li>
+              <li><b>Random events:</b> at least once per day (potentially multiple time) random events are pushed to the players as notifications. The higher the difficulty level, the more random events occur. Players vote on how to handle the random events and the app responds according to the vote.</li>
+              <li><b>Account recovery:</b> if a player loses access to their account, they're able to recover their account through the app.</li>
+            </ul>
+            <br/>
+            <p>
+              <a href="https://github.com/eyecuelab/walkertreker" target="_blank">You can view the code for the app here.</a>
+            </p>
+            <br/>
+            <p>
+              <a href="https://github.com/eyecuelab/walkertreker/wiki" target="_blank">You can read up on the app here, on its wiki.</a> If you're interested in playing the game, this is where you should go to learn how to download and install it.
+            </p>
           </div>
 
           <!-- memem maker -->
