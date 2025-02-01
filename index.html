@@ -100,12 +100,12 @@
             <p class="greytext">A cool little web app to make pixel art.</p>
           </div>
           <div id="pixelart-body" class="roundbottom color2 padded hide">
-            <form id="pixelDimensions">
-              <label for="pixelHeight">Height</label>
-              <input id="pixelHeight" name="pixel art height" type="number" class="lilpadded nooutline noborder rounded" placeholder="Pixels Tall" />
-              <label for="pixelWidth">Width</label>
-              <input id="pixelWidth" name="pixel art width" type="number" class="lilpadded nooutline noborder rounded" placeholder="Pixels Across" />
-              <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext leftmargin width10">Generate Pixel Grid</button>
+            <form id="pixelDimensions" class="flex flexcolumn">
+              <label class="lilbottommargin" for="pixelHeight">Height</label>
+              <input id="pixelHeight" name="pixel art height" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Tall" />
+              <label class="lilbottommargin" for="pixelWidth">Width</label>
+              <input id="pixelWidth" name="pixel art width" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Across" />
+              <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width10">Generate Pixel Grid</button>
             </form>
             <div id="pixelMaker" class="hide">
               <p class="topmargin"><i>Choose a color below. Then click a square to color it in.</i></p>
@@ -216,6 +216,11 @@
           <div id="poker-body" class="roundbottom color2 padded hide">
             <p id="deckID" hidden></p>
             <p id="dealOrDraw" hidden>deal</p>
+            <p class="bottommargin"><i>
+              Deal yourself five cards.<br/>
+              Choose the cards you want to hold, and then draw new cards for all the others.<br/>
+              Try to get the highest score you can without losing all your chips, and make sure to have fun!
+            </i></p>
 
             <!-- poker payouts -->
             <div id="payouts" class="flex flexcolumn color3 whitetext padded rounded">

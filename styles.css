@@ -366,6 +366,10 @@ li {
   margin-bottom: 1rem;
 }
 
+.lilbottommargin {
+  margin-bottom: .5rem;
+}
+
 .rightmargin {
   margin-right: 1rem;
 }
