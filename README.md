@@ -8,3 +8,4 @@
 - [ ] build meme maker using https://imgflip.com/api
 - [ ] create mobile breakpoints
 - [ ] add html2canvas for image saving
+- [ ] make video poker image link a modal
