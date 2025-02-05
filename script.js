@@ -1,5 +1,9 @@
 // utility functions
 
+const openModal = function () {
+  document.getElementById("radicaModal").showModal();
+};
+
 const expandBody = function (idString) {
   const headID = "#" + idString;
   const bodyID = "#" + idString.split("-")[0] + "-body";
@@ -312,6 +316,10 @@ const getDadJoke = async function () {
 
 // click/event listeners
 
+$("#radica").click(function () {
+  openModal();
+})
+
 $(".coolstuff").click(function () {
   expandBody($(this).attr("id"));
 });
@@ -409,7 +417,6 @@ $(".hold").click(function () {
   }
 });
 
-// things are firing in the wrong order
 $("#dealDrawButton").click(function () {
   if ($(this).text() == "Start New Game") {
     for (let i = 1; i <= 5; i++) {

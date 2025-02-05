@@ -10,6 +10,13 @@
   </head>
   <body class="color1">
 
+    <dialog id="radicaModal" class="modal rounded noborder nooutline">
+      <form class="flex flexcolumn flexcenter">
+        <img class="imgfit" src="./img/radica.png" alt="Radica Video Poker LCD game">
+        <button formmethod="dialog" class="button pointer button pointer nooutline noborder color1 rounded width20 whitetext">Close</button>
+      </form>
+    </dialog>
+
     <!-- container -->
     <div class="container padded color2">
       <div class="header flexcolumn rounded">
@@ -141,7 +148,7 @@
             <p id="deckID" hidden></p>
             <p id="dealOrDraw" hidden>deal</p>
             <ul class="bottommargin">
-              <li>This is a re-creation of <a href="./img/radica.png" target="_blank">Radica Video Poker</a>. It plays exactly the same.</li>
+              <li>This is a re-creation of <a id="radica" href="#">Radica Video Poker</a>. It plays exactly the same.</li>
               <li>Deal yourself five cards.</li>
               <li>Choose the cards you want to hold, and then draw new cards for all the others.</li>
               <li>Try to get the highest score you can without losing all your chips, and make sure to have fun!</li>

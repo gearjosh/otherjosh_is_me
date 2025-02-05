@@ -482,6 +482,14 @@ li {
 
 /* One-offs */
 
+.modal {
+  width: 30vw;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);;
+}
+
 .header {
   background-image: url("./img/dnd-header.png");
   background-size: cover;
