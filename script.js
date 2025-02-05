@@ -1,9 +1,5 @@
 // utility functions
 
-const openModal = function () {
-  document.getElementById("radicaModal").showModal();
-};
-
 const expandBody = function (idString) {
   const headID = "#" + idString;
   const bodyID = "#" + idString.split("-")[0] + "-body";
@@ -318,7 +314,7 @@ const getDadJoke = async function () {
 
 $("#radica").click(function (event) {
   event.preventDefault();
-  openModal();
+  document.getElementById("radicaModal").showModal();
 })
 
 $(".coolstuff").click(function () {
