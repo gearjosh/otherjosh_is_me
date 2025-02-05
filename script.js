@@ -397,6 +397,9 @@ $(".colorchange").click(function () {
   $(".lilshadow").css({
     "text-shadow": themes[4] + " 0 .0625rem",
   });
+  $(".button").css({
+    "box-shadow": "0 0.125rem " + themes[3],
+  });
 });
 
 $(".hold").click(function () {
