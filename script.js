@@ -322,7 +322,7 @@ $("#pixelDimensions").submit(function (event) {
   const values = $(this).serializeArray();
   const w = values[1].value;
   const h = values[0].value;
-  const pixelSize = 50 / Number(w) + "vw";
+  const pixelSize = 60 / Number(w) + "vw";
   const grid = createGrid(w, h);
   if (w && h) {
     $("#pixelGrid").html(grid);
