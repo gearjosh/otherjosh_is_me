@@ -579,7 +579,23 @@ li {
     width: 100%;
     box-sizing: border-box;
   }
+  
+  #colorchange-body .colorswatch {
+    height: 10vw;
+    width: 10vw;
+  }
 
+  #colorchange-body .button,
+  #pixelart-body .button,
+  #poker-body .button {
+    height: 10vw;
+  }
+
+  #pixelart-body .palette {
+    width: 4vw;
+    height: 4vw;
+  }
+  
   #poker-body .width10 {
     width: 15vw;
   }
