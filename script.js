@@ -316,7 +316,8 @@ const getDadJoke = async function () {
 
 // click/event listeners
 
-$("#radica").click(function () {
+$("#radica").click(function (event) {
+  event.preventDefault();
   openModal();
 })
 
