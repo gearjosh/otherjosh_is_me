@@ -454,7 +454,7 @@ li {
 /* Repeated Elements */
 
 .button {
-  height: 2.5rem;
+  height: 3rem;
   margin-top: 1rem;
   box-shadow: 0 0.125rem #9F5272;
   transition: transform 200ms;
@@ -471,8 +471,8 @@ li {
 }
 
 .colorswatch {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .pixel {
