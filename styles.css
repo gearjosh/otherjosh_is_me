@@ -554,6 +554,11 @@ li {
 /* Media Queries for Mobile */
 
 @media (width <= 1100px) {
+  
+  .modal {
+    width: 70vw;
+  }
+
   .container {
     max-width: 92vw;
   }
