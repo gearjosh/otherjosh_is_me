@@ -237,6 +237,7 @@
 
               <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width10">Generate Pixel Grid</button>
             </form>
+
             <div id="pixelMaker" class="hide">
               <p class="topmargin"><i>Choose a color below. Then click a square to color it in.</i></p>
               <div class="flex flexrow flexspaced topmargin">
@@ -258,6 +259,14 @@
                 <div class="palette palette15 circle pointer"></div>
               </div>
               <div id="pixelGrid" class="pixelgrid"></div>
+
+              <form id="pixelArtDownload" class="flex flexrow flexcenter topmargin">
+                <div class="flex flexcolumn">
+                  <label class="lilbottommargin" for="pixelArtName">Name your creation</label>
+                  <input id="pixelArtName" placeholder="i.e. Tanuki Mario" type="text" class="lilpadded nooutline noborder rounded">
+                </div>
+                <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width15 leftmargin">Download Your Pixel Art</button>
+              </form>
             </div>
           </div>
 
@@ -322,7 +331,8 @@
     </div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="html2canvas.min.js"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

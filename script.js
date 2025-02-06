@@ -315,7 +315,7 @@ const getDadJoke = async function () {
 $("#radica").click(function (event) {
   event.preventDefault();
   document.getElementById("radicaModal").showModal();
-})
+});
 
 $(".coolstuff").click(function () {
   expandBody($(this).attr("id"));
@@ -338,6 +338,18 @@ $("#pixelDimensions").submit(function (event) {
     $("#pixelMaker").show();
   }
   $(this).trigger("reset");
+});
+
+$("#pixelArtDownload").submit(function (event) {
+  event.preventDefault();
+  
+  const fileName = $("#pixelArtName").val() + ".jpg";
+  html2canvas(document.querySelector("#pixelGrid")).then((canvas) => {
+    canvas.toBlob(function (blob) {
+      window.saveAs(blob, fileName);
+    });
+  });
+  $(this).trigger("reset")
 });
 
 $(".palette").click(function () {
