@@ -464,5 +464,6 @@ $("#dealDrawButton").click(function () {
 });
 
 // Initial Page Load
+
 getDeck();
 getDadJoke();
