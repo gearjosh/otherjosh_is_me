@@ -585,7 +585,7 @@ li {
   }
 
   .sidebar .button {
-    width: 13vw;
+    max-width: 13vw;
     height: 15vw;
     margin-right: 1rem;
     margin-top: auto;
