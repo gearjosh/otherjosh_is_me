@@ -5,7 +5,8 @@
 - [x] add b&w filter for sidebar image on mono theme
 - [x] build video poker using https://deckofcardsapi.com/
 - [x] build poker UI functionality
+- [ ] figure a way to position meme captions over image https://stackoverflow.com/questions/30035530/scale-div-to-fit-background-image
 - [ ] build meme maker using https://imgflip.com/api
 - [x] create mobile breakpoints
-- [ ] add html2canvas for image saving
+- [x] add html2canvas for image saving
 - [x] make video poker image link a modal
