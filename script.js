@@ -298,6 +298,34 @@ const shuffleDeck = async function (deckID) {
   );
 };
 
+const getMemes = async function () {
+  const response = await fetch("https://api.imgflip.com/get_memes");
+  const json = await response.json();
+  if (json.success == true) {
+    const memes = json.data.memes;
+    let grid = "<div class='flex flexcolumn flexspaced'>";
+    let row = "<div class='flex flexrow flexspaced'>";
+    memes.forEach((meme, i) => {
+      let memeDiv =
+        "<div class='flex flexcolumn flexspaced color3 rounded width5 bottommargin'><img class='imgfit meme' src='" +
+        meme["url"] +
+        "'><p class='liltext whitetext centertext'>" +
+        meme["name"] +
+        "</p></div>";
+      row += memeDiv;
+      if ((i+1) % 10 == 0) {
+        row += "</div>";
+        grid += row;
+        row = "<div class='flex flexrow flexspaced'>";
+      }
+    })
+    grid += "</div>";
+    $("#memeThumbs").html(grid);
+  } else {
+    $("#memeThumbs").html("<p>Uh, oh... Something went wrong.</p>");
+  }
+};
+
 const getDadJoke = async function () {
   const response = await fetch("https://icanhazdadjoke.com/", {
     headers: {
@@ -342,14 +370,14 @@ $("#pixelDimensions").submit(function (event) {
 
 $("#pixelArtDownload").submit(function (event) {
   event.preventDefault();
-  
+
   const fileName = $("#pixelArtName").val() + ".jpg";
   html2canvas(document.querySelector("#pixelGrid")).then((canvas) => {
     canvas.toBlob(function (blob) {
       window.saveAs(blob, fileName);
     });
   });
-  $(this).trigger("reset")
+  $(this).trigger("reset");
 });
 
 $(".palette").click(function () {
@@ -463,7 +491,12 @@ $("#dealDrawButton").click(function () {
   }
 });
 
+$(".meme").click(function () {
+  
+})
+
 // Initial Page Load
 
 getDeck();
+getMemes();
 getDadJoke();
