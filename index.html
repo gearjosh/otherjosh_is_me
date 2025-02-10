@@ -329,26 +329,84 @@
                 <div id="memeImg" class="memeimgcontainer" class="halfwidth">
                   <img src="#" alt="">
                   <div>
-                    <p id="caption1" class="caption">test</p>
+                    <p draggable="true" id="caption1" class="caption"></p>
+                    <p draggable="true" id="caption2" class="caption"></p>
+                    <p draggable="true" id="caption3" class="caption"></p>
+                    <p draggable="true" id="caption4" class="caption"></p>
+                    <p draggable="true" id="caption5" class="caption"></p>
+                    <p draggable="true" id="caption6" class="caption"></p>
+                    <p draggable="true" id="caption7" class="caption"></p>
+                    <p draggable="true" id="caption8" class="caption"></p>
                   </div>
-                  <!-- image will go here too -->
                 </div>
                 
                 <div id="memeCaptions" class="flex flexcolumn">
+
+                  <div class="flex flexrow flexend">
+                    <button id="addCaption" type="button" class="button pointer nooutline noborder color5 rounded whitetext width10">+ Caption</button>
+                  </div>
+
                   <div class="flex flexrow flexend lilbottommargin">
                     <div class="flex flexcolumn leftmargin">
                       <label for="textCaption1" class="lilbottommargin">Caption 1</label>
-                      <input id="textCaption1" class="lilpadded nooutline noborder rounded width30" type="text">
+                      <input id="textCaption1" class="captioninput lilpadded nooutline noborder rounded width30" type="text">
                     </div>
                   </div>
-                  <div class="flex flexrow flexend">
-                    <button class="button pointer nooutline noborder color5 rounded whitetext width10">Add Caption</button>
+
+                  <div class="flex flexrow flexend lilbottommargin hide">
+                    <div class="flex flexcolumn leftmargin">
+                      <label for="textCaption2" class="lilbottommargin">Caption 2</label>
+                      <input id="textCaption2" class="captioninput lilpadded nooutline noborder rounded width30" type="text">
+                    </div>
+                  </div>
+
+                  <div class="flex flexrow flexend lilbottommargin hide">
+                    <div class="flex flexcolumn leftmargin">
+                      <label for="textCaption3" class="lilbottommargin">Caption 3</label>
+                      <input id="textCaption3" class="captioninput lilpadded nooutline noborder rounded width30" type="text">
+                    </div>
+                  </div>
+
+                  <div class="flex flexrow flexend lilbottommargin hide">
+                    <div class="flex flexcolumn leftmargin">
+                      <label for="textCaption4" class="lilbottommargin">Caption 4</label>
+                      <input id="textCaption4" class="captioninput lilpadded nooutline noborder rounded width30" type="text">
+                    </div>
+                  </div>
+
+                  <div class="flex flexrow flexend lilbottommargin hide">
+                    <div class="flex flexcolumn leftmargin">
+                      <label for="textCaption5" class="lilbottommargin">Caption 5</label>
+                      <input id="textCaption5" class="captioninput lilpadded nooutline noborder rounded width30" type="text">
+                    </div>
+                  </div>
+
+                  <div class="flex flexrow flexend lilbottommargin hide">
+                    <div class="flex flexcolumn leftmargin">
+                      <label for="textCaption6" class="lilbottommargin">Caption 6</label>
+                      <input id="textCaption6" class="captioninput lilpadded nooutline noborder rounded width30" type="text">
+                    </div>
+                  </div>
+
+                  <div class="flex flexrow flexend lilbottommargin hide">
+                    <div class="flex flexcolumn leftmargin">
+                      <label for="textCaption7" class="lilbottommargin">Caption 7</label>
+                      <input id="textCaption7" class="captioninput lilpadded nooutline noborder rounded width30" type="text">
+                    </div>
+                  </div>
+
+                  <div class="flex flexrow flexend lilbottommargin hide">
+                    <div class="flex flexcolumn leftmargin">
+                      <label for="textCaption8" class="lilbottommargin">Caption 8</label>
+                      <input id="textCaption8" class="captioninput lilpadded nooutline noborder rounded width30" type="text">
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="flex flexcolumn flexend topmargin">
-                <button class="button pointer nooutline noborder color5 rounded whitetext width10 flexend" type="submit">Download</button>
+              <div class="flex flexspaced topmargin">
+                <button class="button pointer nooutline noborder color5 rounded whitetext width10 flexend" type="button">Download</button>
+                <button class="button pointer nooutline noborder color5 rounded whitetext width10 flexend" type="button">Select New Meme</button>
               </div>
             </form>
           </div>

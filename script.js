@@ -305,7 +305,7 @@ const getMemes = async function () {
     const memes = json.data.memes;
     let grid = "<div class='flex flexcolumn flexspaced'>";
     let row = "<div class='flex flexrow flexspaced'>";
-    memes.forEach(function(meme, i) {
+    memes.forEach(function (meme, i) {
       let memeDiv =
         "<div class='meme flex flexcolumn flexspaced pointer color3 rounded width5 bottommargin'><img class='imgfit' src='" +
         meme["url"] +
@@ -492,19 +492,26 @@ $("#dealDrawButton").click(function () {
 });
 
 $("#memeThumbs").on("click", "div.meme", function () {
-  const memeUrl = $(this).children(1).attr("src")
+  const memeUrl = $(this).children(1).attr("src");
   const memeName = $(this).children(2).text();
   // $("#memeImg").html(memeContent + "<img src='" + memeUrl + "' alt='" + memeName + "' class='imgfit'>")
-  $("#memeImg > img").attr("src", memeUrl)
+  $("#memeImg > img").attr("src", memeUrl);
   $("#memeImg > img").attr("alt", memeName);
   $(".memeimgcontainer").css({
-    background: "no-repeat url(" + memeUrl + ") 50% / 100%"
-  })
+    background: "no-repeat url(" + memeUrl + ") 50% / 100%",
+  });
   $("#memeThumbs").hide();
-  $("#memeEditor").show()
+  $("#memeEditor").show();
 });
 
+$("#addCaption").click(function () {
+  $("#memeCaptions").children("div.hide").first().removeClass("hide");
+});
 
+$(".captioninput").on("input", function () {
+  const captionID = "#caption" + $(this).attr("id").slice(-1);
+  $(captionID).text($(this).val());
+});
 
 // Initial Page Load
 
