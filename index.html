@@ -75,7 +75,7 @@
               <p><i>Choose a color palette.</i></p>
             </div>
             <div class="flex flexrow">
-              <button id="dnd" class="colorchange button whitetext pointer nooutline noborder color5 rounded width15">Swords and Sorceresses</button>
+              <button id="dnd" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Swords and Sorceresses</button>
               <div class="flex flexrow rounded whiteborder topmargin leftmargin">
                 <div class="colorswatch dnd1"></div>
                 <div class="colorswatch dnd2"></div>
@@ -85,7 +85,7 @@
               </div>
             </div>
             <div class="flex flexrow topmargin">
-              <button id="mono" class="colorchange button whitetext pointer nooutline noborder color5 rounded width15">Professional Monochrome</button>
+              <button id="mono" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Professional Monochrome</button>
               <div class="flex flexrow rounded whiteborder topmargin leftmargin">
                 <div class="colorswatch mono1"></div>
                 <div class="colorswatch mono2"></div>
@@ -95,7 +95,7 @@
               </div>
             </div>
             <div class="flex flexrow topmargin">
-              <button id="pastel" class="colorchange button whitetext pointer nooutline noborder color5 rounded width15">Springtime Pastel</button>
+              <button id="pastel" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Springtime Pastel</button>
               <div class="flex flexrow rounded whiteborder topmargin leftmargin">
                 <div class="colorswatch pastel1"></div>
                 <div class="colorswatch pastel2"></div>
@@ -105,7 +105,7 @@
               </div>
             </div>
             <div class="flex flexrow topmargin">
-              <button id="playful" class="colorchange button whitetext pointer nooutline noborder color5 rounded width15">Playful Nostalgia</button>
+              <button id="playful" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Playful Nostalgia</button>
               <div class="flex flexrow rounded whiteborder topmargin leftmargin">
                 <div class="colorswatch playful1"></div>
                 <div class="colorswatch playful2"></div>
@@ -115,7 +115,7 @@
               </div>
             </div>
             <div class="flex flexrow topmargin">
-              <button id="vintage" class="colorchange button whitetext pointer nooutline noborder color5 rounded width15">Vintage Kitchen</button>
+              <button id="vintage" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Vintage Kitchen</button>
               <div class="flex flexrow rounded whiteborder topmargin leftmargin">
                 <div class="colorswatch vintage1"></div>
                 <div class="colorswatch vintage2"></div>
@@ -125,7 +125,7 @@
               </div>
             </div>
             <div class="flex flexrow topmargin">
-              <button id="pumpkin" class="colorchange button whitetext pointer nooutline noborder color5 rounded width15">Pumpkin Spice</button>
+              <button id="pumpkin" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Pumpkin Spice</button>
               <div class="flex flexrow rounded whiteborder topmargin leftmargin">
                 <div class="colorswatch pumpkin1"></div>
                 <div class="colorswatch pumpkin2"></div>
@@ -186,27 +186,27 @@
             <div class="flex flexrow flexspaced padded bottommargin center">
               <div id="card1" class="flex flexcolumn">
                 <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold">Hold</button>
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
               </div>
 
               <div id="card2" class="flex flexcolumn">
                 <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold">Hold</button>
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
               </div>
 
               <div id="card3" class="flex flexcolumn">
                 <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold">Hold</button>
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
               </div>
 
               <div id="card4" class="flex flexcolumn">
                 <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold">Hold</button>
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
               </div>
 
               <div id="card5" class="flex flexcolumn">
                 <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold">Hold</button>
+                <button class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
               </div>
             </div>
 
@@ -262,12 +262,14 @@
               </div>
               <div id="pixelGrid" class="pixelgrid"></div>
 
-              <form id="pixelArtDownload" class="flex flexrow flexcenter topmargin">
+              <form id="pixelArtDownload" class="flex flexrow flexcenterjust topmargin">
                 <div class="flex flexcolumn">
                   <label class="lilbottommargin" for="pixelArtName">Name your creation</label>
                   <input id="pixelArtName" placeholder="i.e. Tanuki Mario" type="text" class="lilpadded nooutline noborder rounded">
                 </div>
-                <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width15 leftmargin">Download Your Pixel Art</button>
+                <div class="flex flexcolumn flexend">
+                  <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width15 leftmargin">Download Your Pixel Art</button>
+                </div>
               </form>
             </div>
           </div>
@@ -317,11 +319,38 @@
             <p class="greytext">Create your own meme without a watermark.</p>
           </div>
           <div id="mememaker-body" class="roundbottom color2 padded hide">
-            Under construction... 👷
 
             <div id="memeThumbs">
-
             </div>
+
+            <form id="memeEditor" class="hide">
+              <div class="flex flexrow flexspaced">
+
+                <div id="memeImg" class="memeimgcontainer" class="halfwidth">
+                  <img src="#" alt="">
+                  <div>
+                    <p id="caption1" class="caption">test</p>
+                  </div>
+                  <!-- image will go here too -->
+                </div>
+                
+                <div id="memeCaptions" class="flex flexcolumn">
+                  <div class="flex flexrow flexend lilbottommargin">
+                    <div class="flex flexcolumn leftmargin">
+                      <label for="textCaption1" class="lilbottommargin">Caption 1</label>
+                      <input id="textCaption1" class="lilpadded nooutline noborder rounded width30" type="text">
+                    </div>
+                  </div>
+                  <div class="flex flexrow flexend">
+                    <button class="button pointer nooutline noborder color5 rounded whitetext width10">Add Caption</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flexcolumn flexend topmargin">
+                <button class="button pointer nooutline noborder color5 rounded whitetext width10 flexend" type="submit">Download</button>
+              </div>
+            </form>
           </div>
 
         </div>

@@ -305,20 +305,20 @@ const getMemes = async function () {
     const memes = json.data.memes;
     let grid = "<div class='flex flexcolumn flexspaced'>";
     let row = "<div class='flex flexrow flexspaced'>";
-    memes.forEach((meme, i) => {
+    memes.forEach(function(meme, i) {
       let memeDiv =
-        "<div class='flex flexcolumn flexspaced color3 rounded width5 bottommargin'><img class='imgfit meme' src='" +
+        "<div class='meme flex flexcolumn flexspaced pointer color3 rounded width5 bottommargin'><img class='imgfit' src='" +
         meme["url"] +
-        "'><p class='liltext whitetext centertext'>" +
+        "'><p class='liltext whitetext centertext lilbottommargin'>" +
         meme["name"] +
         "</p></div>";
       row += memeDiv;
-      if ((i+1) % 10 == 0) {
+      if ((i + 1) % 10 == 0) {
         row += "</div>";
         grid += row;
         row = "<div class='flex flexrow flexspaced'>";
       }
-    })
+    });
     grid += "</div>";
     $("#memeThumbs").html(grid);
   } else {
@@ -491,9 +491,20 @@ $("#dealDrawButton").click(function () {
   }
 });
 
-$(".meme").click(function () {
-  
-})
+$("#memeThumbs").on("click", "div.meme", function () {
+  const memeUrl = $(this).children(1).attr("src")
+  const memeName = $(this).children(2).text();
+  // $("#memeImg").html(memeContent + "<img src='" + memeUrl + "' alt='" + memeName + "' class='imgfit'>")
+  $("#memeImg > img").attr("src", memeUrl)
+  $("#memeImg > img").attr("alt", memeName);
+  $(".memeimgcontainer").css({
+    background: "no-repeat url(" + memeUrl + ") 50% / 100%"
+  })
+  $("#memeThumbs").hide();
+  $("#memeEditor").show()
+});
+
+
 
 // Initial Page Load
 
