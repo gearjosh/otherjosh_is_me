@@ -11,6 +11,10 @@ li {
   margin-left: 1rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Flex Layouts */
 
 .flex {
@@ -31,6 +35,10 @@ li {
 
 .flexaround {
   justify-content: space-around;
+}
+
+.flexstart {
+  justify-content: flex-start;
 }
 
 .flexend {
@@ -502,12 +510,20 @@ li {
   outline: 1px solid lightgrey;
 }
 
+.meme > img {
+  height: 5vw;
+  object-fit: cover;
+  object-position: top;
+}
+
 .caption {
   z-index: 10;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   color: white;
-  text-justify: center;
+  position: relative;
+  white-space: pre;
+  text-align: center;
 }
 
 /* One-offs */
@@ -546,12 +562,10 @@ li {
 
 .sidebar {
   width: 20%;
-  box-sizing: border-box;
 }
 
 .main {
   width: 80%;
-  box-sizing: border-box;
 }
 
 .pixelgrid {
@@ -580,8 +594,8 @@ li {
 
 .memeimgcontainer > div {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -620,7 +634,6 @@ li {
     flex-direction: row;
     width: 100%;
     justify-content: flex-start;
-    box-sizing: border-box;
   }
 
   .sidebar img {
@@ -639,7 +652,10 @@ li {
 
   .main {
     width: 100%;
-    box-sizing: border-box;
+  }
+
+  .meme {
+    width: 7vw;
   }
   
   #colorchange-body .colorswatch {
@@ -649,7 +665,8 @@ li {
 
   #colorchange-body .button,
   #pixelart-body .button,
-  #poker-body .button {
+  #poker-body .button,
+  #mememaker-body .button {
     height: 10vw;
   }
 

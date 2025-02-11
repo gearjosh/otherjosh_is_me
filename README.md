@@ -6,7 +6,7 @@
 - [x] build video poker using https://deckofcardsapi.com/
 - [x] build poker UI functionality
 - [x] figure a way to position meme captions over image https://stackoverflow.com/questions/30035530/scale-div-to-fit-background-image
-- [ ] make meme captions drag/droppable using jquery UI
+- [x] make meme captions drag/droppable using jquery UI https://api.jqueryui.com/draggable/
 - [ ] build meme maker using https://imgflip.com/api
 - [x] create mobile breakpoints
 - [x] add html2canvas for image saving

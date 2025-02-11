@@ -501,6 +501,8 @@ $("#memeThumbs").on("click", "div.meme", function () {
     background: "no-repeat url(" + memeUrl + ") 50% / 100%",
   });
   $("#memeThumbs").hide();
+  $("#memeInstructionsOne").hide();
+  $("#memeInstructionsTwo").show();
   $("#memeEditor").show();
 });
 
@@ -512,6 +514,30 @@ $(".captioninput").on("input", function () {
   const captionID = "#caption" + $(this).attr("id").slice(-1);
   $(captionID).text($(this).val());
 });
+
+$(".caption").draggable({
+  containment: "parent",
+});
+
+$("#memeDownload").click(function () {  
+  const fileName = $("#memeTitle").val() + ".jpg";
+  html2canvas(document.querySelector("#memeImg"), {
+    allowTaint: true,
+    useCORS: true,
+  }).then((canvas) => {
+    canvas.toBlob(function (blob) {
+      window.saveAs(blob, fileName);
+    });
+  });
+  $("#memeTitle").val("")
+});
+
+$("#backToMemes").click(function () {
+  $("#memeInstructionsTwo").hide();
+  $("#memeEditor").hide();
+  $("#memeThumbs").show();
+  $("#memeInstructionsOne").show();
+})
 
 // Initial Page Load
 
