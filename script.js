@@ -571,6 +571,7 @@ $("#memeDownload").click(function () {
 $("#backToMemes").click(function () {
   for (let i = 1; i <= 8; i++) {
     $("#textCaption" + i).val("");
+    $("#caption" + i).text("")
   }
   $("#memeUpload").val(null);
   $("#memeInstructionsTwo").hide();
