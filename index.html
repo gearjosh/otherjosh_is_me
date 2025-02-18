@@ -284,7 +284,10 @@
             <p class="greytext">Create your own meme without a watermark.</p>
           </div>
           <div id="mememaker-body" class="roundbottom color2 padded hide">
-            <p id="memeInstructionsOne" class="bottommargin">Choose one of the 100 most popular meme templates.</p>
+            <div id="memeInstructionsOne" class="flex flexcolumn flexcenter">
+              <label for="memeUpload" class="lilbottommargin">Upload your own image or choose a popular template below</label>
+              <input id="memeUpload" type="file" accept="image/*" class="filebuttondnd bottommargin width30">
+            </div>
             <ul id="memeInstructionsTwo" class="bottommargin hide">
               <li>Write up to eight captions. Click <i>Another Caption</i> to add more.</li>
               <li>Drag your captions to the funniest places.</li>

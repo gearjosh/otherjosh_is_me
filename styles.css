@@ -11,6 +11,29 @@ li {
   margin-left: 1rem;
 }
 
+input[type="file"] {
+  color: #333333;
+}
+
+input::file-selector-button {
+  width: 10vw;
+  border: none;
+  outline: none;
+  height: 3rem;
+  transition: transform 200ms;
+  border-radius: .25rem;
+}
+
+input::file-selector-button:hover {
+  font-weight: bold;
+}
+
+input::file-selector-button:active,
+input::file-selector-button:focus {
+  transform: translateY(0.125rem);
+  box-shadow: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -259,6 +282,44 @@ li {
   background-color: #731702;
 }
 
+/* File Upload Buttons */
+
+.filebuttondnd::file-selector-button {
+  background-color: #EE5029;
+  box-shadow: 0 0.125rem #9F5272;
+  color: aliceblue;
+}
+
+.filebuttonmono::file-selector-button {
+  background-color: #0D0000;
+  box-shadow: 0 0.125rem #8C7C69;
+  color: aliceblue;
+}
+
+.filebuttonpastel::file-selector-button {
+  background-color: #5CBFC1;
+  box-shadow: 0 0.125rem #E884A5;
+  color: darkmagenta;
+}
+
+.filebuttonplayful::file-selector-button {
+  background-color: #256E94;
+  box-shadow: 0 0.125rem #FFC738;
+  color: aliceblue;
+}
+
+.filebuttonvintage::file-selector-button {
+  background-color: #908359;
+  box-shadow: 0 0.125rem #4FA4A8;
+  color: aliceblue;
+}
+
+.filebuttonpumpkin::file-selector-button {
+  background-color: #731702;
+  box-shadow: 0 0.125rem #D95204;
+  color: aliceblue;
+}
+
 /* Static Colors */
 
 .blue {
@@ -494,7 +555,7 @@ li {
   font-weight: bold;
 }
 
-.button.active,
+.button:active,
 .button:focus {
   transform: translateY(0.125rem);
   box-shadow: none;

@@ -53,6 +53,9 @@ const drawCards = async function () {
       `https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=${num}`
     );
     const json = await response.json();
+    if (json.success != true) {
+      drawCards();
+    }
     const cards = json.cards;
 
     for (let i = 0; i < cards.length; i++) {
@@ -248,12 +251,9 @@ const updateChips = function (num) {
 };
 
 const scoreHand = function (cards) {
-  console.log("cards: ", cards);
   let score = 0;
   const suits = getCardSuits(cards);
   const vals = getCardValues(cards);
-  console.log("suits: ", suits);
-  console.log("vals: ", vals);
   if (checkFlush(suits) && checkStraight(vals)) {
     if (vals[-1] == 10) {
       score = 2000;
@@ -296,6 +296,11 @@ const shuffleDeck = async function (deckID) {
   const response = await fetch(
     `https://deckofcardsapi.com/api/deck/${deckID}/shuffle/`
   );
+  const json = await response.json();
+  console.log("json: ", json);
+  if (json.success != true) {
+    shuffleDeck(deckID);
+  }
 };
 
 const getMemes = async function () {
@@ -436,6 +441,8 @@ $(".colorchange").click(function () {
   $(".button").css({
     "box-shadow": "0 0.125rem " + themes[3],
   });
+  $("input[type='file']").removeClass();
+  $("input[type='file']").addClass("bottommargin width30 filebutton" + theme);
 });
 
 $(".hold").click(function () {
@@ -494,7 +501,6 @@ $("#dealDrawButton").click(function () {
 $("#memeThumbs").on("click", "div.meme", function () {
   const memeUrl = $(this).children(1).attr("src");
   const memeName = $(this).children(2).text();
-  // $("#memeImg").html(memeContent + "<img src='" + memeUrl + "' alt='" + memeName + "' class='imgfit'>")
   $("#memeImg > img").attr("src", memeUrl);
   $("#memeImg > img").attr("alt", memeName);
   $(".memeimgcontainer").css({
@@ -519,7 +525,26 @@ $(".caption").draggable({
   containment: "parent",
 });
 
-$("#memeDownload").click(function () {  
+$("#memeUpload").change(function (event) {
+  console.log("event: ", event);
+  if (event.target.files && event.target.files[0]) {
+    const imageURL = URL.createObjectURL(event.target.files[0]);
+    const name = event.target.files[0].name;
+    console.log("name: ", name);
+    console.log("imageURL: ", imageURL);
+    $("#memeImg > img").attr("src", imageURL);
+    $("#memeImg > img").attr("alt", name);
+    $(".memeimgcontainer").css({
+      background: "no-repeat url(" + imageURL + ") 50% / 100%",
+    });
+    $("#memeThumbs").hide();
+    $("#memeInstructionsOne").hide();
+    $("#memeInstructionsTwo").show();
+    $("#memeEditor").show();
+  }
+});
+
+$("#memeDownload").click(function () {
   const fileName = $("#memeTitle").val() + ".jpg";
   html2canvas(document.querySelector("#memeImg"), {
     allowTaint: true,
@@ -529,15 +554,16 @@ $("#memeDownload").click(function () {
       window.saveAs(blob, fileName);
     });
   });
-  $("#memeTitle").val("")
+  $("#memeTitle").val("");
 });
 
 $("#backToMemes").click(function () {
+  $("#memeUpload").val(null);
   $("#memeInstructionsTwo").hide();
   $("#memeEditor").hide();
   $("#memeThumbs").show();
   $("#memeInstructionsOne").show();
-})
+});
 
 // Initial Page Load
 
