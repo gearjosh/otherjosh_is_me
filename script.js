@@ -297,7 +297,6 @@ const shuffleDeck = async function (deckID) {
     `https://deckofcardsapi.com/api/deck/${deckID}/shuffle/`
   );
   const json = await response.json();
-  console.log("json: ", json);
   if (json.success != true) {
     shuffleDeck(deckID);
   }
@@ -526,12 +525,9 @@ $(".caption").draggable({
 });
 
 $("#memeUpload").change(function (event) {
-  console.log("event: ", event);
   if (event.target.files && event.target.files[0]) {
     const imageURL = URL.createObjectURL(event.target.files[0]);
     const name = event.target.files[0].name;
-    console.log("name: ", name);
-    console.log("imageURL: ", imageURL);
     $("#memeImg > img").attr("src", imageURL);
     $("#memeImg > img").attr("alt", name);
     $(".memeimgcontainer").css({
