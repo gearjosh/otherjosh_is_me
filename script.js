@@ -1,4 +1,4 @@
-// utility functions
+// Utility Functions
 
 const expandBody = function (idString) {
   const headID = "#" + idString;
@@ -55,25 +55,42 @@ const drawCards = async function () {
     const json = await response.json();
     if (json.success != true) {
       drawCards();
+    } else {
+      const cards = json.cards;
+      if (
+        (cards[0].code == "AS" &&
+          cards[1].code == "2S" &&
+          cards[2].code == "3S" &&
+          cards[3].code == "4S" &&
+          cards[4].code == "5S") ||
+        (cards[0].code == "6S" &&
+          cards[1].code == "7S" &&
+          cards[2].code == "8S" &&
+          cards[3].code == "9S" &&
+          cards[4].code == "0S")
+      ) {
+        shuffleDeck(deckID);
+        drawCards();
+      } else {
+        for (let i = 0; i < cards.length; i++) {
+          const card = cards[i];
+          const slot = emptyCardSlots[i];
+          $("#card" + slot + " > img").attr({
+            src: card.image,
+            alt: card.value + " of " + card.suit,
+            "data-code": card.code,
+          });
+        }
+      }
+      if (dealOrDraw == "deal") {
+        $("#dealOrDraw").text("");
+      } else {
+        $("#dealOrDraw").text("deal");
+        scoreHand(getHand());
+      }
     }
-    const cards = json.cards;
+  }
 
-    for (let i = 0; i < cards.length; i++) {
-      const card = cards[i];
-      const slot = emptyCardSlots[i];
-      $("#card" + slot + " > img").attr({
-        src: card.image,
-        alt: card.value + " of " + card.suit,
-        "data-code": card.code,
-      });
-    }
-  }
-  if (dealOrDraw == "deal") {
-    $("#dealOrDraw").text("");
-  } else {
-    $("#dealOrDraw").text("deal");
-    scoreHand(getHand());
-  }
 };
 
 const getCardSuits = function (cardArray) {
@@ -342,7 +359,7 @@ const getDadJoke = async function () {
   $("#dadJoke").text(json.joke);
 };
 
-// click/event listeners
+// Event Listeners
 
 $("#radica").click(function (event) {
   event.preventDefault();
@@ -520,10 +537,6 @@ $(".captioninput").on("input", function () {
   $(captionID).text($(this).val());
 });
 
-$(".caption").draggable({
-  containment: "parent",
-});
-
 $("#memeUpload").change(function (event) {
   if (event.target.files && event.target.files[0]) {
     const imageURL = URL.createObjectURL(event.target.files[0]);
@@ -559,6 +572,12 @@ $("#backToMemes").click(function () {
   $("#memeEditor").hide();
   $("#memeThumbs").show();
   $("#memeInstructionsOne").show();
+});
+
+// jQuery UI
+
+$(".caption").draggable({
+  containment: "parent",
 });
 
 // Initial Page Load
