@@ -558,6 +558,8 @@ $("#memeDownload").click(function () {
   html2canvas(document.querySelector("#memeImg"), {
     allowTaint: true,
     useCORS: true,
+    width: document.querySelector("#memeImg").offsetWidth - 1,
+    height: document.querySelector("#memeImg").offsetHeight - 1,
   }).then((canvas) => {
     canvas.toBlob(function (blob) {
       window.saveAs(blob, fileName);
