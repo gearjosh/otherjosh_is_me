@@ -81,12 +81,12 @@ const drawCards = async function () {
             "data-code": card.code,
           });
         }
-      }
-      if (dealOrDraw == "deal") {
-        $("#dealOrDraw").text("");
-      } else {
-        $("#dealOrDraw").text("deal");
-        scoreHand(getHand());
+        if (dealOrDraw == "deal") {
+          $("#dealOrDraw").text("");
+        } else {
+          $("#dealOrDraw").text("deal");
+          scoreHand(getHand());
+        }
       }
     }
   }
