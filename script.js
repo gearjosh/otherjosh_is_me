@@ -591,3 +591,4 @@ $(".caption").draggable({
 getDeck();
 getMemes();
 getDadJoke();
+$("#memeUpload").val(null)
