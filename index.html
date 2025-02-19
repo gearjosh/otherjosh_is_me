@@ -73,7 +73,7 @@
           </div>
           <div id="colorchange-body" class="roundbottom color2 padded  hide">
             <div class="flex flexrow">
-              <p><i>Choose a color palette.</i></p>
+              <p>Choose a color palette.</p>
             </div>
             <div class="flex flexrow">
               <button type="button" id="dnd" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Swords and Sorceresses</button>
@@ -358,15 +358,18 @@
           </div>
           <div id="pixelart-body" class="roundbottom color2 padded hide">
             <form id="pixelDimensions" class="flex flexrow flexcenter">
-              <div class="flex flexcolumn">
-                <label class="lilbottommargin" for="pixelHeight">Height <span class="liltext">(required)</span></label>
-                <input id="pixelHeight" name="pixel art height" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Tall" required/>
-  
-                <label class="lilbottommargin" for="pixelWidth">Width <span class="liltext">(required)</span></label>
-                <input id="pixelWidth" name="pixel art width" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Across" required/>
-              </div>
 
-              <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width10 leftmargin">Generate Pixel Grid</button>
+                <div class="flex flexcolumn rightmargin">
+                  <label class="lilbottommargin" for="pixelHeight">Height <span class="liltext">(required)</span></label>
+                  <input id="pixelHeight" name="pixel art height" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Tall" required/>
+                </div>
+  
+                <div class="flex flexcolumn rightmargin">
+                  <label class="lilbottommargin" for="pixelWidth">Width <span class="liltext">(required)</span></label>
+                  <input id="pixelWidth" name="pixel art width" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Across" required/>
+                </div>
+
+              <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width10">Generate Pixel Grid</button>
             </form>
 
             <div id="pixelMaker" class="hide">
