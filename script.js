@@ -361,6 +361,10 @@ const getDadJoke = async function () {
 
 // Event Listeners
 
+$("#hamburger").click(function () {
+  $("#mobileLinks").toggle();
+})
+
 $("#radica").click(function (event) {
   event.preventDefault();
   document.getElementById("radicaModal").showModal();

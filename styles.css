@@ -16,7 +16,7 @@ input[type="file"] {
 }
 
 input::file-selector-button {
-  width: 10vw;
+  width: 20vw;
   border: none;
   outline: none;
   height: 3rem;
@@ -496,6 +496,10 @@ input::file-selector-button:focus {
   width: 30vw;
 }
 
+.width40 {
+  width: 40vw;
+}
+
 .halfwidth {
   width: 50%;
 }
@@ -625,6 +629,33 @@ input::file-selector-button:focus {
   width: 20%;
 }
 
+.sidebarmobile {
+  width: 100%;
+  /* justify-content: flex-between; */
+  display: none;
+}
+
+.sidebarmobile img {
+  width: 15vw;
+  height: 15vw;
+  margin-right: 1rem;
+}
+
+.sidebarmobile a {
+  text-decoration: none;
+  padding: .5rem;
+  display: block;
+}
+
+.sidebarmobile #mobileLinks {
+  display: none;
+}
+
+.sidebarmobile #hamburger {
+  font-size: 13vw;
+  line-height: 20%;
+}
+
 .main {
   width: 80%;
 }
@@ -677,10 +708,42 @@ input::file-selector-button:focus {
 
 /* Media Queries for Mobile */
 
-@media (width <= 1100px) {
+@media (width < 1250px) {
+
+  .meme p {
+    display: none;
+  }
+
+}
+
+@media (width < 1050px) {
+
+  .header div.h4text {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .header div.h4text h4 {
+    width: min-content;
+  }
+
+}
+
+@media (width < 900px) {
+  html {
+    font-size: 75%;
+  }
+
+  input::file-selector-button {
+    height: 10vw;
+  }
   
-  .modal {
-    width: 70vw;
+  .sidebar {
+    display: none;
+  }
+
+  .sidebarmobile {
+    display: flex;
   }
 
   .container {
@@ -691,28 +754,20 @@ input::file-selector-button:focus {
     flex-direction: column;
   }
 
-  .sidebar {
-    flex-direction: row;
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .sidebar img {
-    width: 15vw;
-    height: 15vw;
-    margin-right: 1rem;
-  }
-
-  .sidebar .button {
-    max-width: 13vw;
-    height: 15vw;
-    margin-right: 1rem;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
   .main {
     width: 100%;
+  }
+
+  .modal {
+    width: 70vw;
+  }
+
+  .meme {
+    width: 7vw;
+  }
+
+  .modal {
+    width: 70vw;
   }
 
   .meme {
@@ -722,6 +777,14 @@ input::file-selector-button:focus {
   #colorchange-body .colorswatch {
     height: 10vw;
     width: 10vw;
+  }
+
+  .sidebarmobile .button {
+    height: 5rem;
+  }
+
+  #colorchange-body .button {
+    width: 20vw;
   }
 
   #colorchange-body .button,
@@ -742,5 +805,11 @@ input::file-selector-button:focus {
 
   #memeTitle {
     width: 39.5vw;
+  }
+}
+
+@media (width < 550px) {
+  html {
+    font-size: 50%;
   }
 }

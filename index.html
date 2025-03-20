@@ -6,6 +6,7 @@
     <link href="reset.css" rel="stylesheet" type="text/css" media="all">
     <link href="stylesheet.css" rel="stylesheet" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/themes/redmond/jquery-ui.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="styles.css" rel="stylesheet" type="text/css" media="all">
     <title>otherjosh's very cool website</title>
   </head>
@@ -22,14 +23,14 @@
     <div class="container padded color2">
       <div class="header flexcolumn rounded">
         <h1 class="whitetext h1text bigshadow bottommargin">Josh Gearheart <span class="liltext">is</span> otherjosh</h1>
-        <h4 class="whitetext h4text lilshadow">
-          Software Developer<br/>
-          Polymath Nerd<br/>
-          Movie Reviewer<br/>
-          Experimental Musician<br/>
-          Insatiable Artist<br/>
-          Good Cook<br/>
-        </h4>
+        <div class="flex flexcolumn flexspaced whitetext h4text lilshadow fullwidth">
+          <h4>Software Developer</h4>
+          <h4>Polymath Nerd</h4>
+          <h4>Movie Reviewer</h4>
+          <h4>Experimental Musician</h4>
+          <h4>Insatiable Artist</h4>
+          <h4>Good Cook</h4>
+        </div>
       </div>
 
       <!-- content area -->
@@ -59,9 +60,31 @@
           </a>
         </div>
 
+        <div class="sidebarmobile flexcolumn padded color3 rounded topmargin rightmargin">
+          <div class="flex flexrow flexcenteralign flexspaced">
+            <img id="me" class="imgfit rounded" title="A photo of otherjosh with tiny flowers in his beard"
+              src="img/otherjosh.jpg" alt="A photo of otherjosh with tiny flowers in his beard">
+            <a href="javascript:void(0);" class="whitetext mediumshadow" id="hamburger"">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div class="flex flexcolumn" id="mobileLinks">
+            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Read my
+              movie reviews</button>
+            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Listen to
+              my bad music project</button>
+            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Listen to
+              my improvised music</button>
+            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Check out
+              the code I write</button>
+            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Check out
+              my career history</button>
+          </div>
+        </div>
+
         <!-- main -->
         <div class="main padded rounded color4 topmargin">
-          <h2 class="h2text whitetext mediumshadow">Cool Stuff Made By Me</h2>
+          <h2 class="h2text whitetext mediumshadow">Cool Stuff I've Made</h2>
 
           <!-- colorchange -->
           <div id="colorchange-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
@@ -231,7 +254,7 @@
           <div id="mememaker-body" class="roundbottom color2 padded hide">
             <div id="memeInstructionsOne" class="flex flexcolumn flexcenter">
               <label for="memeUpload" class="lilbottommargin">Upload your own image or choose a popular template below</label>
-              <input id="memeUpload" type="file" accept="image/*" class="filebuttondnd bottommargin width30">
+              <input id="memeUpload" type="file" accept="image/*" class="filebuttondnd bottommargin width40">
             </div>
             <ul id="memeInstructionsTwo" class="bottommargin hide">
               <li>Write up to eight captions. Click <i>Another Caption</i> to add more.</li>
