@@ -589,6 +589,7 @@ input::file-selector-button:focus {
   position: relative;
   white-space: pre-line;
   display: inline-block;
+  text-align: center;
 }
 
 /* One-offs */
