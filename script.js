@@ -526,6 +526,9 @@ $("#memeThumbs").on("click", "div.meme", function () {
   $(".memeimgcontainer").css({
     background: "no-repeat url(" + memeUrl + ") 50% / 100%",
   });
+  $(".caption").css({
+    "max-width": $(".memeimgcontainer > img").css("width"),
+  })
   $("#memeThumbs").hide();
   $("#memeInstructionsOne").hide();
   $("#memeInstructionsTwo").show();
