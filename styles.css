@@ -1,19 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
-}
+}  
 
 ul {
   list-style: circle;
-}
+}  
 
 li {
   margin-left: 1rem;
-}
+}  
 
 input[type="file"] {
   color: #333333;
-}
+}  
 
 input::file-selector-button {
   width: 20vw;
@@ -22,21 +26,17 @@ input::file-selector-button {
   height: 3rem;
   transition: transform 200ms;
   border-radius: .25rem;
-}
+}  
 
 input::file-selector-button:hover {
   font-weight: bold;
-}
+}  
 
 input::file-selector-button:active,
 input::file-selector-button:focus {
   transform: translateY(0.125rem);
   box-shadow: none;
-}
-
-* {
-  box-sizing: border-box;
-}
+}  
 
 /* Flex Layouts */
 
@@ -588,7 +588,6 @@ input::file-selector-button:focus {
   color: white;
   position: relative;
   white-space: pre;
-  text-align: center;
 }
 
 /* One-offs */
@@ -690,6 +689,7 @@ input::file-selector-button:focus {
   left: 0;
   width: 100%;
   height: 100%;
+  text-wrap: balance;
 }
 
 /* Animation Keyframes */
