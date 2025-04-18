@@ -429,7 +429,7 @@ $(".colorchange").click(function () {
   } else if (theme == "pastel") {
     $(".greytext").css("color", "#505050");
     $(".whitetext").css("color", "darkmagenta");
-    $(".header > h1, .header > h4").css("color", "lightcyan");
+    $(".header h1, .header h4").css("color", "lightcyan");
     $(".footer p").css("color", "lightcyan");
     $("#me").removeClass("bw");
   } else {
