@@ -1,487 +1,587 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit="cover" />
-    <link href="img/favicon.ico" rel="shortcut icon" type="img/jpeg">
-    <link href="reset.css" rel="stylesheet" type="text/css" media="all">
-    <link href="stylesheet.css" rel="stylesheet" type="text/css" charset="utf-8" />
-    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/themes/redmond/jquery-ui.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="styles.css" rel="stylesheet" type="text/css" media="all">
-    <title>otherjosh's very cool website</title>
-  </head>
-  <body class="color1">
 
-    <dialog id="radicaModal" class="modal rounded noborder nooutline">
-      <form class="flex flexcolumn flexcenter">
-        <img class="imgfit" src="./img/radica.png" alt="Radica Video Poker LCD game">
-        <button type="button" formmethod="dialog" class="button pointer nooutline noborder color1 rounded width20 whitetext">Close</button>
-      </form>
-    </dialog>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit="cover" />
+  <link href="img/favicon.ico" rel="shortcut icon" type="img/jpeg">
+  <link href="reset.css" rel="stylesheet" type="text/css" media="all">
+  <link href="stylesheet.css" rel="stylesheet" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/themes/redmond/jquery-ui.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="styles.css" rel="stylesheet" type="text/css" media="all">
+  <title>otherjosh's very cool website</title>
+</head>
 
-    <!-- container -->
-    <div class="container padded color2">
-      <div class="header flexcolumn rounded">
-        <h1 class="whitetext h1text bigshadow bottommargin">Josh Gearheart <span class="liltext">is</span> otherjosh</h1>
-        <div class="flex flexcolumn flexspaced whitetext h4text lilshadow fullwidth">
-          <h4>Software Developer</h4>
-          <h4>Polymath Nerd</h4>
-          <h4>Movie Reviewer</h4>
-          <h4>Experimental Musician</h4>
-          <h4>Insatiable Artist</h4>
-          <h4>Good Cook</h4>
-        </div>
-      </div>
+<body class="color1">
 
-      <!-- content area -->
-      <div class="innercontainer flex flexrow ">
-        <!-- sidebar -->
-        <div class="sidebar flex flexcolumn padded color3 rounded topmargin rightmargin">
-          <img id="me" class="imgfit rounded" title="A photo of otherjosh with tiny flowers in his beard" src="img/otherjosh.jpg" alt="A photo of otherjosh with tiny flowers in his beard">
+  <dialog id="radicaModal" class="modal rounded noborder nooutline">
+    <form class="flex flexcolumn flexcenter">
+      <img class="imgfit" src="./img/radica.png" alt="Radica Video Poker LCD game">
+      <button type="submit" formmethod="dialog"
+        class="button pointer nooutline noborder color1 rounded width20 whitetext">Close</button>
+    </form>
+  </dialog>
 
-          <a href="https://letterboxd.com/otherjosh/" target="_blank">
-            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Read my movie reviews</button>
-          </a>
-
-          <a href="https://open.spotify.com/artist/0RDRAIStOOEz0xEB9EcFIt" target="_blank">
-            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Listen to my bad music project</button>
-          </a>
-
-          <a href="https://open.spotify.com/artist/0xRUQxosi9oTtqbFJuMcw5?si=xQ72CUzISaKwW7ix3lmWgg" target="_blank">
-            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Listen to my improvised music</button>
-          </a>
-
-          <a href="https://github.com/gearjosh" target="_blank">
-            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Check out the code I write</button>
-          </a>
-
-          <a href="https://www.linkedin.com/in/josh-gearheart/" target="_blank">
-            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Check out my career history</button>
-          </a>
-        </div>
-
-        <div class="sidebarmobile flexcolumn padded color3 rounded topmargin rightmargin">
-          <div class="flex flexrow flexcenteralign flexspaced">
-            <img id="me" class="imgfit rounded" title="A photo of otherjosh with tiny flowers in his beard"
-              src="img/otherjosh.jpg" alt="A photo of otherjosh with tiny flowers in his beard">
-            <a href="javascript:void(0);" class="whitetext mediumshadow" id="hamburger"">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>
-          <div class="flex flexcolumn" id="mobileLinks">
-            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Read my
-              movie reviews</button>
-            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Listen to
-              my bad music project</button>
-            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Listen to
-              my improvised music</button>
-            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Check out
-              the code I write</button>
-            <button type="button" class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Check out
-              my career history</button>
-          </div>
-        </div>
-
-        <!-- main -->
-        <div class="main padded rounded color4 topmargin">
-          <h2 class="h2text whitetext mediumshadow">Cool Stuff I've Made</h2>
-
-          <!-- colorchange -->
-          <div id="colorchange-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
-            <div class="flex flexrow flexspaced">
-              <h3 class="whitetext mediumshadow h3text">Color Theme Switcher</h3>
-              <p class="whitetext h3text">&#9650;</p>
-            </div>
-            <p class="greytext">Adjust this site's colors if they hurt your eyes.</p>
-          </div>
-          <div id="colorchange-body" class="roundbottom color2 padded  hide">
-            <div class="flex flexrow">
-              <p>Choose a color palette.</p>
-            </div>
-            <div class="flex flexrow">
-              <button type="button" id="dnd" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Swords and Sorceresses</button>
-              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
-                <div class="colorswatch dnd1"></div>
-                <div class="colorswatch dnd2"></div>
-                <div class="colorswatch dnd3"></div>
-                <div class="colorswatch dnd4"></div>
-                <div class="colorswatch dnd5"></div>
-              </div>
-            </div>
-            <div class="flex flexrow topmargin">
-              <button type="button" id="mono" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Professional Monochrome</button>
-              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
-                <div class="colorswatch mono1"></div>
-                <div class="colorswatch mono2"></div>
-                <div class="colorswatch mono3"></div>
-                <div class="colorswatch mono4"></div>
-                <div class="colorswatch mono5"></div>
-              </div>
-            </div>
-            <div class="flex flexrow topmargin">
-              <button type="button" id="pastel" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Springtime Pastel</button>
-              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
-                <div class="colorswatch pastel1"></div>
-                <div class="colorswatch pastel2"></div>
-                <div class="colorswatch pastel3"></div>
-                <div class="colorswatch pastel4"></div>
-                <div class="colorswatch pastel5"></div>
-              </div>
-            </div>
-            <div class="flex flexrow topmargin">
-              <button type="button" id="playful" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Playful Nostalgia</button>
-              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
-                <div class="colorswatch playful1"></div>
-                <div class="colorswatch playful2"></div>
-                <div class="colorswatch playful3"></div>
-                <div class="colorswatch playful4"></div>
-                <div class="colorswatch playful5"></div>
-              </div>
-            </div>
-            <div class="flex flexrow topmargin">
-              <button type="button" id="vintage" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Vintage Kitchen</button>
-              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
-                <div class="colorswatch vintage1"></div>
-                <div class="colorswatch vintage2"></div>
-                <div class="colorswatch vintage3"></div>
-                <div class="colorswatch vintage4"></div>
-                <div class="colorswatch vintage5"></div>
-              </div>
-            </div>
-            <div class="flex flexrow topmargin">
-              <button type="button" id="pumpkin" class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Pumpkin Spice</button>
-              <div class="flex flexrow rounded whiteborder topmargin leftmargin">
-                <div class="colorswatch pumpkin1"></div>
-                <div class="colorswatch pumpkin2"></div>
-                <div class="colorswatch pumpkin3"></div>
-                <div class="colorswatch pumpkin4"></div>
-                <div class="colorswatch pumpkin5"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- video poker -->
-          <div id="poker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
-            <div class="flex flexrow flexspaced">
-              <h3 class="whitetext mediumshadow h3text">Video Poker</h3>
-              <p class="whitetext h3text">&#9650;</p>
-            </div>
-            <p class="greytext">Play video poker, based off the handheld LCD game I used to play as a kid.</p>
-          </div>
-          <div id="poker-body" class="roundbottom color2 padded hide">
-            <p id="deckID" hidden></p>
-            <p id="dealOrDraw" hidden>deal</p>
-            <ul class="bottommargin">
-              <li>This is a re-creation of <a id="radica" href="#">Radica Video Poker</a>. It plays exactly the same.</li>
-              <li>Deal yourself five cards.</li>
-              <li>Choose the cards you want to hold, and then draw new cards for all the others.</li>
-              <li>Try to get the highest score you can without losing all your chips.</li>
-              <li>Good luck! (You'll need it)</li>
-            </ul>
-
-            <!-- poker payouts -->
-            <div id="payouts" class="flex flexcolumn color3 whitetext padded rounded">
-              <div class="flex flexrow flexaround">
-                <div class="flex flexcolumn">
-                  <p id="5" class="righttext">Pair (Jacks or better) - $5</p>
-                  <p id="10" class="righttext">2 Pair - $10</p>
-                  <p id="15" class="righttext">3 of a Kind - $15</p>
-                  <p id="20" class="righttext">Straight - $20</p>
-                </div>
-                <div class="flex flexcolumn">
-                  <p id="25" class="righttext">Flush - $25</p>
-                  <p id="40" class="righttext">Full House - $40</p>
-                  <p id="125" class="righttext">4 of a Kind - $125</p>
-                  <p id="250" class="righttext">Straight Flush - $250</p>
-                </div>
-                <div class="flex flexcenter">
-                  <p id="2000" class="centertext lilshadow h3text">Royal Flush - $2000</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- poker chips -->
-            <div class="flex flexrow flexcenter topmargin">
-              <div class="chip circle blue"></div>
-              <p class="h3text bluetext leftmargin">$<span id="chips">100</span></p>
-            </div>
-
-            <!-- poker hand -->
-            <div class="flex flexrow flexspaced padded bottommargin center">
-              <div id="card1" class="flex flexcolumn">
-                <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button type="button" class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
-              </div>
-
-              <div id="card2" class="flex flexcolumn">
-                <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button type="button" class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
-              </div>
-
-              <div id="card3" class="flex flexcolumn">
-                <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button type="button" class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
-              </div>
-
-              <div id="card4" class="flex flexcolumn">
-                <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button type="button" class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
-              </div>
-
-              <div id="card5" class="flex flexcolumn">
-                <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png" alt="the back of a playing card">
-                <button type="button" class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
-              </div>
-            </div>
-
-            <div class="width20 center">
-              <button type="button" id="dealDrawButton" class="button pointer nooutline noborder color3 rounded whitetext fullwidth h4text">Deal</button>
-            </div>
-
-            <div class="height1 padded">
-              <p id="hand" class="h4text greytext centertext"></p>
-            </div>
-          </div>
-
-          <!-- memem maker -->
-          <div id="mememaker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
-            <div class="flex flexrow flexspaced">
-              <h3 class="whitetext mediumshadow h3text">Meme Maker</h3>
-              <p class="whitetext h3text">&#9650;</p>
-            </div>
-            <p class="greytext">Create your own meme without a watermark.</p>
-          </div>
-          <div id="mememaker-body" class="roundbottom color2 padded hide">
-            <div id="memeInstructionsOne" class="flex flexcolumn flexcenter">
-              <label for="memeUpload" class="lilbottommargin">Upload your own image or choose a popular template below</label>
-              <input id="memeUpload" type="file" accept="image/*" class="filebuttondnd bottommargin width40">
-            </div>
-            <ul id="memeInstructionsTwo" class="bottommargin hide">
-              <li>Write up to eight captions. Click <i>Another Caption</i> to add more.</li>
-              <li>Drag your captions to the funniest places.</li>
-              <li>Give your meme a title and download it to share with all your friends.</li>
-            </ul>
-
-            <div id="memeThumbs">
-              <p class="bottommargin">Select one of the 100 most popular meme templates.</p>
-            </div>
-
-            <form id="memeEditor" class="hide">
-              <div class="flex flexrow flexspaced">
-
-                <div id="memeImg" class="memeimgcontainer" class="halfwidth">
-                  <img src="#" alt="">
-                  <div>
-                    <span id="caption1" class="caption pointer h4text"></span>
-                    <br/>
-                    <span id="caption2" class="caption pointer h4text"></span>
-                    <br/>
-                    <span id="caption3" class="caption pointer h4text"></span>
-                    <br/>
-                    <span id="caption4" class="caption pointer h4text"></span>
-                    <br/>
-                    <span id="caption5" class="caption pointer h4text"></span>
-                    <br/>
-                    <span id="caption6" class="caption pointer h4text"></span>
-                    <br/>
-                    <span id="caption7" class="caption pointer h4text"></span>
-                    <br/>
-                    <span id="caption8" class="caption pointer h4text"></span>
-                  </div>
-                </div>
-                
-                <div id="memeCaptions" class="flex flexcolumn">
-
-                  <div class="flex flexrow flexend">
-                    <button id="addCaption" type="button" class="button pointer nooutline noborder color5 rounded whitetext width10">Another Caption</button>
-                  </div>
-
-                  <div class="flex flexrow flexend lilbottommargin">
-                    <div class="flex flexcolumn leftmargin">
-                      <label for="textCaption1" class="lilbottommargin">Caption 1</label>
-                      <textarea id="textCaption1" class="captioninput lilpadded nooutline noborder rounded width30" type="text"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="flex flexrow flexend lilbottommargin hide">
-                    <div class="flex flexcolumn leftmargin">
-                      <label for="textCaption2" class="lilbottommargin">Caption 2</label>
-                      <textarea id="textCaption2" class="captioninput lilpadded nooutline noborder rounded width30" type="text"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="flex flexrow flexend lilbottommargin hide">
-                    <div class="flex flexcolumn leftmargin">
-                      <label for="textCaption3" class="lilbottommargin">Caption 3</label>
-                      <textarea id="textCaption3" class="captioninput lilpadded nooutline noborder rounded width30" type="text"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="flex flexrow flexend lilbottommargin hide">
-                    <div class="flex flexcolumn leftmargin">
-                      <label for="textCaption4" class="lilbottommargin">Caption 4</label>
-                      <textarea id="textCaption4" class="captioninput lilpadded nooutline noborder rounded width30" type="text"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="flex flexrow flexend lilbottommargin hide">
-                    <div class="flex flexcolumn leftmargin">
-                      <label for="textCaption5" class="lilbottommargin">Caption 5</label>
-                      <textarea id="textCaption5" class="captioninput lilpadded nooutline noborder rounded width30" type="text"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="flex flexrow flexend lilbottommargin hide">
-                    <div class="flex flexcolumn leftmargin">
-                      <label for="textCaption6" class="lilbottommargin">Caption 6</label>
-                      <textarea id="textCaption6" class="captioninput lilpadded nooutline noborder rounded width30" type="text"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="flex flexrow flexend lilbottommargin hide">
-                    <div class="flex flexcolumn leftmargin">
-                      <label for="textCaption7" class="lilbottommargin">Caption 7</label>
-                      <textarea id="textCaption7" class="captioninput lilpadded nooutline noborder rounded width30" type="text"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="flex flexrow flexend lilbottommargin hide">
-                    <div class="flex flexcolumn leftmargin">
-                      <label for="textCaption8" class="lilbottommargin">Caption 8</label>
-                      <textarea id="textCaption8" class="captioninput lilpadded nooutline noborder rounded width30" type="text"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flexspaced topmargin">
-                <div class="flex flexrow flexstart">
-                  <div class="flex flexcolumn">
-                    <label for="memeTitle" class="lilbottommargin">Title your meme</label>
-                    <input id="memeTitle" class="lilpadded nooutline noborder rounded width20" placeholder="i.e. One does not simply make a meme " type="text">
-                  </div>
-                  <div class="flex flexcolumn flexend leftmargin">
-                    <button id="memeDownload" class="button pointer nooutline noborder color5 rounded whitetext width10 flexend" type="button">Download Meme</button>
-                  </div>
-                </div>
-                <div class="flex flexcolumn flexend">
-                  <button id="backToMemes" class="button pointer nooutline noborder color5 rounded whitetext width10 flexend" type="button">Make a New Meme</button>
-                </div>
-              </div>
-            </form>
-          </div>
-
-          <!-- pixelart -->
-          <div id="pixelart-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
-            <div class="flex flexrow flexspaced">
-              <h3 class="whitetext mediumshadow h3text">Pixel Art Maker</h3>
-              <p class="whitetext h3text">&#9650;</p>
-            </div>
-            <p class="greytext">A cool little web app to make pixel art.</p>
-          </div>
-          <div id="pixelart-body" class="roundbottom color2 padded hide">
-            <form id="pixelDimensions" class="flex flexrow flexcenter">
-
-                <div class="flex flexcolumn rightmargin">
-                  <label class="lilbottommargin" for="pixelHeight">Height <span class="liltext">(required)</span></label>
-                  <input id="pixelHeight" name="pixel art height" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Tall" required/>
-                </div>
-  
-                <div class="flex flexcolumn rightmargin">
-                  <label class="lilbottommargin" for="pixelWidth">Width <span class="liltext">(required)</span></label>
-                  <input id="pixelWidth" name="pixel art width" type="number" class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Across" required/>
-                </div>
-
-              <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width10">Generate Pixel Grid</button>
-            </form>
-
-            <div id="pixelMaker" class="hide">
-              <p class="topmargin"><i>Choose a color below. Then click a square to color it in.</i></p>
-              <div class="flex flexrow flexspaced topmargin">
-                <div class="palette palette0 circle pointer grow"></div>
-                <div class="palette palette1 circle pointer"></div>
-                <div class="palette palette2 circle pointer"></div>
-                <div class="palette palette3 circle pointer"></div>
-                <div class="palette palette4 circle pointer"></div>
-                <div class="palette palette5 circle pointer"></div>
-                <div class="palette palette6 circle pointer"></div>
-                <div class="palette palette7 circle pointer"></div>
-                <div class="palette palette8 circle pointer"></div>
-                <div class="palette palette9 circle pointer"></div>
-                <div class="palette palette10 circle pointer"></div>
-                <div class="palette palette11 circle pointer"></div>
-                <div class="palette palette12 circle pointer"></div>
-                <div class="palette palette13 circle pointer"></div>
-                <div class="palette palette14 circle pointer"></div>
-                <div class="palette palette15 circle pointer"></div>
-              </div>
-              <div id="pixelGrid" class="pixelgrid"></div>
-
-              <form id="pixelArtDownload" class="flex flexrow flexcenterjust topmargin">
-                <div class="flex flexcolumn">
-                  <label class="lilbottommargin" for="pixelArtName">Name your creation</label>
-                  <input id="pixelArtName" placeholder="i.e. Tanuki Mario" type="text" class="lilpadded nooutline noborder rounded">
-                </div>
-                <div class="flex flexcolumn flexend">
-                  <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width15 leftmargin">Download Your Pixel Art</button>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <!-- walker treker -->
-          <div id="walkertreker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
-            <div class="flex flexrow flexspaced">
-              <h3 class="whitetext mediumshadow h3text">Walker Treker Alpha Build</h3>
-              <p class="whitetext h3text">&#9650;</p>
-            </div>
-            <p class="greytext">A React Native app where I built all the frontend.</p>
-          </div>
-          <div id="walkertreker-body" class="roundbottom color2 padded hide">
-            <p>
-              Walker Treker is a social walking game developed in React Native for iOS and Android. I was lucky enough to co-build the very first version with one other developer. The app uses Redux with React to dispatch actions, and the Google Fit API to access the phones pedometer. I was responsible for developing all the frontend code, and my co-developer was responsible for all the backend code. We developed the first version of the game in seven weeks. Two subsequent teams have iterated on our original alpha version.
-            </p>
-            <br/>
-            <p>
-              The conceit of the game is this: you and your friends are being pursued by zombies, and you all must take enough steps every day to make it to a safehouse and escape from the undead horde. Here are some of the features of the game:
-            </p>
-            <br/>
-            <ul>
-              <li><b>Character creation:</b> each player is assigned a unique token to ensure a specific phone is tied to a specific player.</li>
-              <li><b>Campaign settings:</b> the player who starts the game can choose the difficulty, which will determine how many steps each player must take per day to get to the safehouse.</li>
-              <li><b>Player invites:</b> the player who starts the game can invite friends from their phone's contacts via text messages. These texts have contain a unique link to join the specific campaign. Two players are required but the game can take up to five.</li>
-              <li><b>Power-ups:</b> if players make it to the safehouse with extra steps, they can spend those steps to scavenge for useful items that will aid their team.</li>
-              <li><b>Health and hunger:</b> each player has a hunger level (that increases every hour) and a health level which is reduced by random events or if the player is caught by zombies.</li>
-              <li><b>Random events:</b> at least once per day (potentially multiple time) random events are pushed to the players as notifications. The higher the difficulty level, the more random events occur. Players vote on how to handle the random events and the app responds according to the vote.</li>
-              <li><b>Account recovery:</b> if a player loses access to their account, they're able to recover their account through the app.</li>
-            </ul>
-            <br/>
-            <p>
-              <a href="https://github.com/eyecuelab/walkertreker" target="_blank">You can view the code for the app here.</a>
-            </p>
-            <br/>
-            <p>
-              <a href="https://github.com/eyecuelab/walkertreker/wiki" target="_blank">You can read up on the app here, on its wiki.</a> If you're interested in playing the game, this is where you should go to learn how to download and install it.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- footer -->
-      <div class="footer flex flexcolumn flexend rounded topmargin" >
-        <div class="transparent padded">
-          <p class="whitetext centertext">This site was built with artisanal, small-batch code meticulously hand-crafted and styled by otherjosh.</p>
-          <p class="whitetext centertext liltext topmargin"><i id="dadJoke"></i></p>
-        </div>
+  <!-- container -->
+  <div class="container padded color2">
+    <div class="header flexcolumn rounded">
+      <h1 class="whitetext h1text bigshadow bottommargin">Josh Gearheart <span class="liltext">is</span> otherjosh</h1>
+      <div class="flex flexcolumn flexspaced whitetext h4text lilshadow fullwidth">
+        <h4>Software Developer</h4>
+        <h4>Polymath Nerd</h4>
+        <h4>Movie Reviewer</h4>
+        <h4>Experimental Musician</h4>
+        <h4>Insatiable Artist</h4>
+        <h4>Good Cook</h4>
       </div>
     </div>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-  </body>
+    <!-- content area -->
+    <div class="innercontainer flex flexrow ">
+      <!-- sidebar -->
+      <div class="sidebar flex flexcolumn padded color3 rounded topmargin rightmargin">
+        <img id="me" class="imgfit rounded" title="A photo of otherjosh with tiny flowers in his beard"
+          src="img/otherjosh.jpg" alt="A photo of otherjosh with tiny flowers in his beard">
+
+        <a href="https://letterboxd.com/otherjosh/" target="_blank">
+          <button type="button"
+            class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Read my movie
+            reviews</button>
+        </a>
+
+        <a href="https://open.spotify.com/artist/0RDRAIStOOEz0xEB9EcFIt" target="_blank">
+          <button type="button"
+            class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Listen to my bad
+            music project</button>
+        </a>
+
+        <a href="https://open.spotify.com/artist/0xRUQxosi9oTtqbFJuMcw5?si=xQ72CUzISaKwW7ix3lmWgg" target="_blank">
+          <button type="button"
+            class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Listen to my
+            improvised music</button>
+        </a>
+
+        <a href="https://github.com/gearjosh" target="_blank">
+          <button type="button"
+            class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Check out the code I
+            write</button>
+        </a>
+
+        <a href="https://www.linkedin.com/in/josh-gearheart/" target="_blank">
+          <button type="button"
+            class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Check out my career
+            history</button>
+        </a>
+      </div>
+
+      <div class="sidebarmobile flexcolumn padded color3 rounded topmargin rightmargin">
+        <div class="flex flexrow flexcenteralign flexspaced">
+          <img id="me" class="imgfit rounded" title="A photo of otherjosh with tiny flowers in his beard"
+            src="img/otherjosh.jpg" alt="A photo of otherjosh with tiny flowers in his beard">
+          <h1 class="h1text whitetext mediumshadow">Links</h1>
+          <a href="javascript:void(0);" class="whitetext mediumshadow" id="hamburger"">
+              <i class=" fa fa-bars"></i>
+          </a>
+        </div>
+        <div class="flex flexcolumn" id="mobileLinks">
+          <a href="https://letterboxd.com/otherjosh/" target="_blank">
+            <button type="button"
+              class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Read
+              my
+              movie reviews</button>
+          </a>
+          <a href="https://open.spotify.com/artist/0RDRAIStOOEz0xEB9EcFIt" target="_blank">
+            <button type="button"
+              class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Listen
+              to
+              my bad music project</button>
+          </a>
+          <a href="https://open.spotify.com/artist/0RDRAIStOOEz0xEB9EcFIt" target="_blank">
+            <button type="button"
+              class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Listen
+              to
+              my improvised music</button>
+          </a>
+          <a href="https://github.com/gearjosh" target="_blank">
+            <button type="button"
+              class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Check
+              out
+              the code I write</button>
+          </a>
+          <a href="https://www.linkedin.com/in/josh-gearheart/" target="_blank">
+            <button type="button"
+              class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Check
+              out
+              my career history</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- main -->
+      <div class="main padded rounded color4 topmargin">
+        <h2 class="h2text whitetext mediumshadow">Cool Stuff I've Made</h2>
+
+        <!-- colorchange -->
+        <div id="colorchange-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
+          <div class="flex flexrow flexspaced">
+            <h3 class="whitetext mediumshadow h3text">Color Theme Switcher</h3>
+            <p class="whitetext h3text">&#9650;</p>
+          </div>
+          <p class="greytext">Adjust this site's colors if they hurt your eyes.</p>
+        </div>
+        <div id="colorchange-body" class="roundbottom color2 padded  hide">
+          <div class="flex flexrow">
+            <p>Choose a color palette.</p>
+          </div>
+          <div class="flex flexrow">
+            <button type="button" id="dnd"
+              class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Swords
+              and Sorceresses</button>
+            <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+              <div class="colorswatch dnd1"></div>
+              <div class="colorswatch dnd2"></div>
+              <div class="colorswatch dnd3"></div>
+              <div class="colorswatch dnd4"></div>
+              <div class="colorswatch dnd5"></div>
+            </div>
+          </div>
+          <div class="flex flexrow topmargin">
+            <button type="button" id="mono"
+              class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Professional
+              Monochrome</button>
+            <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+              <div class="colorswatch mono1"></div>
+              <div class="colorswatch mono2"></div>
+              <div class="colorswatch mono3"></div>
+              <div class="colorswatch mono4"></div>
+              <div class="colorswatch mono5"></div>
+            </div>
+          </div>
+          <div class="flex flexrow topmargin">
+            <button type="button" id="pastel"
+              class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Springtime
+              Pastel</button>
+            <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+              <div class="colorswatch pastel1"></div>
+              <div class="colorswatch pastel2"></div>
+              <div class="colorswatch pastel3"></div>
+              <div class="colorswatch pastel4"></div>
+              <div class="colorswatch pastel5"></div>
+            </div>
+          </div>
+          <div class="flex flexrow topmargin">
+            <button type="button" id="playful"
+              class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Playful
+              Nostalgia</button>
+            <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+              <div class="colorswatch playful1"></div>
+              <div class="colorswatch playful2"></div>
+              <div class="colorswatch playful3"></div>
+              <div class="colorswatch playful4"></div>
+              <div class="colorswatch playful5"></div>
+            </div>
+          </div>
+          <div class="flex flexrow topmargin">
+            <button type="button" id="vintage"
+              class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Vintage
+              Kitchen</button>
+            <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+              <div class="colorswatch vintage1"></div>
+              <div class="colorswatch vintage2"></div>
+              <div class="colorswatch vintage3"></div>
+              <div class="colorswatch vintage4"></div>
+              <div class="colorswatch vintage5"></div>
+            </div>
+          </div>
+          <div class="flex flexrow topmargin">
+            <button type="button" id="pumpkin"
+              class="colorchange topmargin button whitetext pointer nooutline noborder color5 rounded width15">Pumpkin
+              Spice</button>
+            <div class="flex flexrow rounded whiteborder topmargin leftmargin">
+              <div class="colorswatch pumpkin1"></div>
+              <div class="colorswatch pumpkin2"></div>
+              <div class="colorswatch pumpkin3"></div>
+              <div class="colorswatch pumpkin4"></div>
+              <div class="colorswatch pumpkin5"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- video poker -->
+        <div id="poker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
+          <div class="flex flexrow flexspaced">
+            <h3 class="whitetext mediumshadow h3text">Video Poker</h3>
+            <p class="whitetext h3text">&#9650;</p>
+          </div>
+          <p class="greytext">Play video poker, based off the handheld LCD game I used to play as a kid.</p>
+        </div>
+        <div id="poker-body" class="roundbottom color2 padded hide">
+          <p id="deckID" hidden></p>
+          <p id="dealOrDraw" hidden>deal</p>
+          <ul class="bottommargin">
+            <li>This is a re-creation of <a id="radica" href="#">Radica Video Poker</a>. It plays exactly the same.</li>
+            <li>Deal yourself five cards.</li>
+            <li>Choose the cards you want to hold, and then draw new cards for all the others.</li>
+            <li>Try to get the highest score you can without losing all your chips.</li>
+            <li>Good luck! (You'll need it)</li>
+          </ul>
+
+          <!-- poker payouts -->
+          <div id="payouts" class="flex flexcolumn color3 whitetext padded rounded">
+            <div class="flex flexrow flexaround">
+              <div class="flex flexcolumn">
+                <p id="5" class="righttext">Pair (Jacks or better) - $5</p>
+                <p id="10" class="righttext">2 Pair - $10</p>
+                <p id="15" class="righttext">3 of a Kind - $15</p>
+                <p id="20" class="righttext">Straight - $20</p>
+              </div>
+              <div class="flex flexcolumn">
+                <p id="25" class="righttext">Flush - $25</p>
+                <p id="40" class="righttext">Full House - $40</p>
+                <p id="125" class="righttext">4 of a Kind - $125</p>
+                <p id="250" class="righttext">Straight Flush - $250</p>
+              </div>
+              <div class="flex flexcenter">
+                <p id="2000" class="centertext lilshadow h3text">Royal Flush - $2000</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- poker chips -->
+          <div class="flex flexrow flexcenter topmargin">
+            <div class="chip circle blue"></div>
+            <p class="h3text bluetext leftmargin">$<span id="chips">100</span></p>
+          </div>
+
+          <!-- poker hand -->
+          <div class="flex flexrow flexspaced padded bottommargin center">
+            <div id="card1" class="flex flexcolumn">
+              <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png"
+                alt="the back of a playing card">
+              <button type="button"
+                class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
+            </div>
+
+            <div id="card2" class="flex flexcolumn">
+              <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png"
+                alt="the back of a playing card">
+              <button type="button"
+                class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
+            </div>
+
+            <div id="card3" class="flex flexcolumn">
+              <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png"
+                alt="the back of a playing card">
+              <button type="button"
+                class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
+            </div>
+
+            <div id="card4" class="flex flexcolumn">
+              <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png"
+                alt="the back of a playing card">
+              <button type="button"
+                class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
+            </div>
+
+            <div id="card5" class="flex flexcolumn">
+              <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png"
+                alt="the back of a playing card">
+              <button type="button"
+                class="button pointer nooutline noborder color5 rounded width10 whitetext hold topmargin">Hold</button>
+            </div>
+          </div>
+
+          <div class="width20 center">
+            <button type="button" id="dealDrawButton"
+              class="button pointer nooutline noborder color3 rounded whitetext fullwidth h4text">Deal</button>
+          </div>
+
+          <div class="height1 padded">
+            <p id="hand" class="h4text greytext centertext"></p>
+          </div>
+        </div>
+
+        <!-- memem maker -->
+        <div id="mememaker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
+          <div class="flex flexrow flexspaced">
+            <h3 class="whitetext mediumshadow h3text">Meme Maker</h3>
+            <p class="whitetext h3text">&#9650;</p>
+          </div>
+          <p class="greytext">Create your own meme without a watermark.</p>
+        </div>
+        <div id="mememaker-body" class="roundbottom color2 padded hide">
+          <div id="memeInstructionsOne" class="flex flexcolumn flexcenter">
+            <label for="memeUpload" class="lilbottommargin">Upload your own image or choose a popular template
+              below</label>
+            <input id="memeUpload" type="file" accept="image/*" class="filebuttondnd bottommargin width40">
+          </div>
+          <ul id="memeInstructionsTwo" class="bottommargin hide">
+            <li>Write up to eight captions. Click <i>Another Caption</i> to add more.</li>
+            <li>Drag your captions to the funniest places.</li>
+            <li>Give your meme a title and download it to share with all your friends.</li>
+          </ul>
+
+          <div id="memeThumbs">
+            <p class="bottommargin">Select one of the 100 most popular meme templates.</p>
+          </div>
+
+          <form id="memeEditor" class="hide">
+            <div class="flex flexrow flexspaced">
+
+              <div id="memeImg" class="memeimgcontainer" class="halfwidth">
+                <img src="#" alt="">
+                <div>
+                  <span id="caption1" class="caption pointer h4text"></span>
+                  <br />
+                  <span id="caption2" class="caption pointer h4text"></span>
+                  <br />
+                  <span id="caption3" class="caption pointer h4text"></span>
+                  <br />
+                  <span id="caption4" class="caption pointer h4text"></span>
+                  <br />
+                  <span id="caption5" class="caption pointer h4text"></span>
+                  <br />
+                  <span id="caption6" class="caption pointer h4text"></span>
+                  <br />
+                  <span id="caption7" class="caption pointer h4text"></span>
+                  <br />
+                  <span id="caption8" class="caption pointer h4text"></span>
+                </div>
+              </div>
+
+              <div id="memeCaptions" class="flex flexcolumn">
+
+                <div class="flex flexrow flexend">
+                  <button id="addCaption" type="button"
+                    class="button pointer nooutline noborder color5 rounded whitetext width10">Another Caption</button>
+                </div>
+
+                <div class="flex flexrow flexend lilbottommargin">
+                  <div class="flex flexcolumn leftmargin">
+                    <label for="textCaption1" class="lilbottommargin">Caption 1</label>
+                    <textarea id="textCaption1" class="captioninput lilpadded nooutline noborder rounded width30"
+                      type="text"></textarea>
+                  </div>
+                </div>
+
+                <div class="flex flexrow flexend lilbottommargin hide">
+                  <div class="flex flexcolumn leftmargin">
+                    <label for="textCaption2" class="lilbottommargin">Caption 2</label>
+                    <textarea id="textCaption2" class="captioninput lilpadded nooutline noborder rounded width30"
+                      type="text"></textarea>
+                  </div>
+                </div>
+
+                <div class="flex flexrow flexend lilbottommargin hide">
+                  <div class="flex flexcolumn leftmargin">
+                    <label for="textCaption3" class="lilbottommargin">Caption 3</label>
+                    <textarea id="textCaption3" class="captioninput lilpadded nooutline noborder rounded width30"
+                      type="text"></textarea>
+                  </div>
+                </div>
+
+                <div class="flex flexrow flexend lilbottommargin hide">
+                  <div class="flex flexcolumn leftmargin">
+                    <label for="textCaption4" class="lilbottommargin">Caption 4</label>
+                    <textarea id="textCaption4" class="captioninput lilpadded nooutline noborder rounded width30"
+                      type="text"></textarea>
+                  </div>
+                </div>
+
+                <div class="flex flexrow flexend lilbottommargin hide">
+                  <div class="flex flexcolumn leftmargin">
+                    <label for="textCaption5" class="lilbottommargin">Caption 5</label>
+                    <textarea id="textCaption5" class="captioninput lilpadded nooutline noborder rounded width30"
+                      type="text"></textarea>
+                  </div>
+                </div>
+
+                <div class="flex flexrow flexend lilbottommargin hide">
+                  <div class="flex flexcolumn leftmargin">
+                    <label for="textCaption6" class="lilbottommargin">Caption 6</label>
+                    <textarea id="textCaption6" class="captioninput lilpadded nooutline noborder rounded width30"
+                      type="text"></textarea>
+                  </div>
+                </div>
+
+                <div class="flex flexrow flexend lilbottommargin hide">
+                  <div class="flex flexcolumn leftmargin">
+                    <label for="textCaption7" class="lilbottommargin">Caption 7</label>
+                    <textarea id="textCaption7" class="captioninput lilpadded nooutline noborder rounded width30"
+                      type="text"></textarea>
+                  </div>
+                </div>
+
+                <div class="flex flexrow flexend lilbottommargin hide">
+                  <div class="flex flexcolumn leftmargin">
+                    <label for="textCaption8" class="lilbottommargin">Caption 8</label>
+                    <textarea id="textCaption8" class="captioninput lilpadded nooutline noborder rounded width30"
+                      type="text"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flexspaced topmargin">
+              <div class="flex flexrow flexstart">
+                <div class="flex flexcolumn">
+                  <label for="memeTitle" class="lilbottommargin">Title your meme</label>
+                  <input id="memeTitle" class="lilpadded nooutline noborder rounded width20"
+                    placeholder="i.e. One does not simply make a meme " type="text">
+                </div>
+                <div class="flex flexcolumn flexend leftmargin">
+                  <button id="memeDownload"
+                    class="button pointer nooutline noborder color5 rounded whitetext width10 flexend"
+                    type="button">Download Meme</button>
+                </div>
+              </div>
+              <div class="flex flexcolumn flexend">
+                <button id="backToMemes"
+                  class="button pointer nooutline noborder color5 rounded whitetext width10 flexend" type="button">Make
+                  a New Meme</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- pixelart -->
+        <div id="pixelart-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
+          <div class="flex flexrow flexspaced">
+            <h3 class="whitetext mediumshadow h3text">Pixel Art Maker</h3>
+            <p class="whitetext h3text">&#9650;</p>
+          </div>
+          <p class="greytext">A cool little web app to make pixel art.</p>
+        </div>
+        <div id="pixelart-body" class="roundbottom color2 padded hide">
+          <form id="pixelDimensions" class="flex flexrow flexcenter">
+
+            <div class="flex flexcolumn rightmargin">
+              <label class="lilbottommargin" for="pixelHeight">Height <span class="liltext">(required)</span></label>
+              <input id="pixelHeight" name="pixel art height" type="number"
+                class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Tall" required />
+            </div>
+
+            <div class="flex flexcolumn rightmargin">
+              <label class="lilbottommargin" for="pixelWidth">Width <span class="liltext">(required)</span></label>
+              <input id="pixelWidth" name="pixel art width" type="number"
+                class="lilbottommargin lilpadded nooutline noborder rounded" placeholder="Pixels Across" required />
+            </div>
+
+            <button type="submit" class="button pointer nooutline noborder color5 rounded whitetext width10">Generate
+              Pixel Grid</button>
+          </form>
+
+          <div id="pixelMaker" class="hide">
+            <p class="topmargin"><i>Choose a color below. Then click a square to color it in.</i></p>
+            <div class="flex flexrow flexspaced topmargin">
+              <div class="palette palette0 circle pointer grow"></div>
+              <div class="palette palette1 circle pointer"></div>
+              <div class="palette palette2 circle pointer"></div>
+              <div class="palette palette3 circle pointer"></div>
+              <div class="palette palette4 circle pointer"></div>
+              <div class="palette palette5 circle pointer"></div>
+              <div class="palette palette6 circle pointer"></div>
+              <div class="palette palette7 circle pointer"></div>
+              <div class="palette palette8 circle pointer"></div>
+              <div class="palette palette9 circle pointer"></div>
+              <div class="palette palette10 circle pointer"></div>
+              <div class="palette palette11 circle pointer"></div>
+              <div class="palette palette12 circle pointer"></div>
+              <div class="palette palette13 circle pointer"></div>
+              <div class="palette palette14 circle pointer"></div>
+              <div class="palette palette15 circle pointer"></div>
+            </div>
+            <div id="pixelGrid" class="pixelgrid"></div>
+
+            <form id="pixelArtDownload" class="flex flexrow flexcenterjust topmargin">
+              <div class="flex flexcolumn">
+                <label class="lilbottommargin" for="pixelArtName">Name your creation</label>
+                <input id="pixelArtName" placeholder="i.e. Tanuki Mario" type="text"
+                  class="lilpadded nooutline noborder rounded">
+              </div>
+              <div class="flex flexcolumn flexend">
+                <button type="submit"
+                  class="button pointer nooutline noborder color5 rounded whitetext width15 leftmargin">Download Your
+                  Pixel Art</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- walker treker -->
+        <div id="walkertreker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
+          <div class="flex flexrow flexspaced">
+            <h3 class="whitetext mediumshadow h3text">Walker Treker Alpha Build</h3>
+            <p class="whitetext h3text">&#9650;</p>
+          </div>
+          <p class="greytext">A React Native app where I built all the frontend.</p>
+        </div>
+        <div id="walkertreker-body" class="roundbottom color2 padded hide">
+          <p>
+            Walker Treker is a social walking game developed in React Native for iOS and Android. I was lucky enough to
+            co-build the very first version with one other developer. The app uses Redux with React to dispatch actions,
+            and the Google Fit API to access the phones pedometer. I was responsible for developing all the frontend
+            code, and my co-developer was responsible for all the backend code. We developed the first version of the
+            game in seven weeks. Two subsequent teams have iterated on our original alpha version.
+          </p>
+          <br />
+          <p>
+            The conceit of the game is this: you and your friends are being pursued by zombies, and you all must take
+            enough steps every day to make it to a safehouse and escape from the undead horde. Here are some of the
+            features of the game:
+          </p>
+          <br />
+          <ul>
+            <li><b>Character creation:</b> each player is assigned a unique token to ensure a specific phone is tied to
+              a specific player.</li>
+            <li><b>Campaign settings:</b> the player who starts the game can choose the difficulty, which will determine
+              how many steps each player must take per day to get to the safehouse.</li>
+            <li><b>Player invites:</b> the player who starts the game can invite friends from their phone's contacts via
+              text messages. These texts have contain a unique link to join the specific campaign. Two players are
+              required but the game can take up to five.</li>
+            <li><b>Power-ups:</b> if players make it to the safehouse with extra steps, they can spend those steps to
+              scavenge for useful items that will aid their team.</li>
+            <li><b>Health and hunger:</b> each player has a hunger level (that increases every hour) and a health level
+              which is reduced by random events or if the player is caught by zombies.</li>
+            <li><b>Random events:</b> at least once per day (potentially multiple time) random events are pushed to the
+              players as notifications. The higher the difficulty level, the more random events occur. Players vote on
+              how to handle the random events and the app responds according to the vote.</li>
+            <li><b>Account recovery:</b> if a player loses access to their account, they're able to recover their
+              account through the app.</li>
+          </ul>
+          <br />
+          <p>
+            <a href="https://github.com/eyecuelab/walkertreker" target="_blank">You can view the code for the app
+              here.</a>
+          </p>
+          <br />
+          <p>
+            <a href="https://github.com/eyecuelab/walkertreker/wiki" target="_blank">You can read up on the app here, on
+              its wiki.</a> If you're interested in playing the game, this is where you should go to learn how to
+            download and install it.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer flex flexcolumn flexend rounded topmargin">
+      <div class="transparent padded">
+        <p class="whitetext centertext">This site was built with artisanal, small-batch code meticulously hand-crafted
+          and styled by otherjosh.</p>
+        <p class="whitetext centertext liltext topmargin"><i id="dadJoke"></i></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
 </html>
