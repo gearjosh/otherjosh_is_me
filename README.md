@@ -12,3 +12,4 @@
 - [x] create mobile breakpoints
 - [x] add html2canvas for image saving
 - [x] make video poker image link a modal
+- [ ] bug fix: holding five cards stops next deal

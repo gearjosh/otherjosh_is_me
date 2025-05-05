@@ -330,7 +330,7 @@ const getMemes = async function () {
       let memeDiv =
         "<div class='meme flex flexcolumn flexspaced pointer color3 rounded width5 bottommargin'><img class='imgfit' src='" +
         meme["url"] +
-        "'><p class='liltext whitetext centertext lilbottommargin'>" +
+        "'><p class='liltext whitetext centertext tinypadded'>" +
         meme["name"] +
         "</p></div>";
       row += memeDiv;
@@ -368,6 +368,17 @@ $("#hamburger").click(function () {
 $("#radica").click(function (event) {
   event.preventDefault();
   document.getElementById("radicaModal").showModal();
+});
+
+$(".expandable").click(function (event) {
+  event.preventDefault();
+  const source = $(this).attr("src");
+  const altText = $(this).attr("alt");
+  $("#imgModal img").attr({
+    src: source,
+    alt: altText,
+  })
+  document.getElementById("imgModal").showModal();
 });
 
 $(".coolstuff").click(function () {

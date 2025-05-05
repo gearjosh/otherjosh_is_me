@@ -17,16 +17,24 @@
 
   <dialog id="radicaModal" class="modal rounded noborder nooutline">
     <form class="flex flexcolumn flexcenter">
-      <img class="imgfit" src="./img/radica.png" alt="Radica Video Poker LCD game">
+      <img class="imgfit" src="img/radica.png" alt="Radica Video Poker LCD game">
       <button type="submit" formmethod="dialog"
         class="button pointer nooutline noborder color1 rounded width20 whitetext">Close</button>
+    </form>
+  </dialog>
+
+  <dialog id="imgModal" class="modal rounded noborder nooutline color3">
+    <form class="flex flexcolumn flexcenter">
+      <img class="imgfit" src="" alt="">
+      <button type="submit" formmethod="dialog"
+        class="button pointer nooutline noborder color1 rounded width20 whitetext topmargin">Close</button>
     </form>
   </dialog>
 
   <!-- container -->
   <div class="container padded color2">
     <div class="header flexcolumn rounded">
-      <h1 class="whitetext h1text bigshadow bottommargin">Josh Gearheart <span class="liltext">is</span> otherjosh</h1>
+      <h1 class="whitetext h1text morris bigshadow bottommargin">Josh Gearheart <span class="liltext">is</span> otherjosh</h1>
       <div class="flex flexcolumn flexspaced whitetext h4text lilshadow fullwidth">
         <h4>Software Developer</h4>
         <h4>Polymath Nerd</h4>
@@ -79,7 +87,7 @@
         <div class="flex flexrow flexcenteralign flexspaced">
           <img id="me" class="imgfit rounded" title="A photo of otherjosh with tiny flowers in his beard"
             src="img/otherjosh.jpg" alt="A photo of otherjosh with tiny flowers in his beard">
-          <h1 class="h1text whitetext mediumshadow">Links</h1>
+          <h1 class="h1text morris whitetext mediumshadow">Links</h1>
           <a href="javascript:void(0);" class="whitetext mediumshadow" id="hamburger"">
               <i class=" fa fa-bars"></i>
           </a>
@@ -97,7 +105,7 @@
               to
               my bad music project</button>
           </a>
-          <a href="https://open.spotify.com/artist/0RDRAIStOOEz0xEB9EcFIt" target="_blank">
+          <a href="https://open.spotify.com/artist/0xRUQxosi9oTtqbFJuMcw5?si=xQ72CUzISaKwW7ix3lmWgg" target="_blank">
             <button type="button"
               class="button pointer nooutline noborder color1 rounded fullwidth h4text whitetext topmargin centertext">Listen
               to
@@ -120,7 +128,7 @@
 
       <!-- main -->
       <div class="main padded rounded color4 topmargin">
-        <h2 class="h2text whitetext mediumshadow">Cool Stuff I've Made</h2>
+        <h2 class="h2text whitetext mediumshadow morris">Fun Things <span class="liltext">by me for you</span></h2>
 
         <!-- colorchange -->
         <div id="colorchange-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
@@ -220,7 +228,7 @@
           <p id="deckID" hidden></p>
           <p id="dealOrDraw" hidden>deal</p>
           <ul class="bottommargin">
-            <li>This is a re-creation of <a id="radica" href="#">Radica Video Poker</a>. It plays exactly the same.</li>
+            <li>This is a re-creation of <a id="radica" href="#">Radica Video Poker</a>. It plays exactly the same way as the original.</li>
             <li>Deal yourself five cards.</li>
             <li>Choose the cards you want to hold, and then draw new cards for all the others.</li>
             <li>Try to get the highest score you can without losing all your chips.</li>
@@ -255,7 +263,7 @@
           </div>
 
           <!-- poker hand -->
-          <div class="flex flexrow flexspaced padded bottommargin center">
+          <div class="flex flexrow flexspaced padded bottommargin centermargin">
             <div id="card1" class="flex flexcolumn">
               <img class="imgfit width10 morerounded" src="https://deckofcardsapi.com/static/img/back.png"
                 alt="the back of a playing card">
@@ -292,7 +300,7 @@
             </div>
           </div>
 
-          <div class="width20 center">
+          <div class="width20 centermargin">
             <button type="button" id="dealDrawButton"
               class="button pointer nooutline noborder color3 rounded whitetext fullwidth h4text">Deal</button>
           </div>
@@ -509,6 +517,52 @@
           </div>
         </div>
 
+        <h2 class="h2text morris whitetext mediumshadow topmargin">Projects I've Built</h2>
+
+        <!-- next round trivia -->
+        <div id="nextround-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
+          <div class="flex flexrow flexspaced">
+            <h3 class="whitetext mediumshadow h3text">Next Round Trivia</h3>
+            <p class="whitetext h3text">&#9650;</p>
+          </div>
+          <p class="greytext">A website built for a client's trivia business.</p>
+        </div>
+        <div id="nextround-body" class="roundbottom color2 padded hide">
+          <p class="bottommargin">
+            <a href="https://nextroundtrivia.com" target="_blank"><span class="h4text">nextroundtrivia.com</span></a> was built for a client starting a trivia subscription business. Businesses like breweries, coffee
+            shops, and community centers can now subscribe to original, weekly trivia content through his website.
+          </p>
+          <div>
+            <div class="flex flexrow flexaround">
+              <div class="width40percent">
+                <video class="morerounded" src="img/responsive_nrt1.mp4" width="100%" type="video/mp4"
+                  loop="true" muted="true" autoplay></video>
+              </div>
+              <div class="width40percent">
+                <video class="morerounded" src="img/responsive_nrt2.mp4" width="100%" type="video/mp4" loop="true" muted="true"
+                  autoplay></video>
+              </div>
+            </div>
+            <p class="greytext liltext centertext liltopmargin"><i>Responsive design for all screen sizes</i></p>
+          </div>
+          <p class="topmargin bottommargin">
+            After getting the requirements from the client, I built the entire project from scratch, from design to development to
+            deployment. I designed the Next Round Trivia logo and its branded material personally. I created the color scheme and
+            layout of the site from the ground up. This was a delightfully fun project, allowing me to wear as many hats as possible
+            and do a lot of design work along with the development.
+          </p>
+          <div>
+            <div class="flex flexrow flexaround">
+              <img class="imgfit width25percent pointer expandable" src="img/host_score_sheet.png" alt="a document designed for Next Round Trivia">
+              <img class="imgfit width25percent pointer expandable" src="img/nrt_logo_design.png" alt="logo designs created for Next Round Trivia">
+              <img class="imgfit width25percent pointer expandable" src="img/team_score_sheet.png" alt="a document designed for Next Round Trivia">
+            </div>
+            <p class="greytext liltext centertext liltopmargin"><i>Logo and asset design</i></p>
+          </div>
+          <p class="topmargin">This project was built to be as low-maintainence as possible for the client. It's all custom JavaScript and CSS, no libraries or frameworks. It uses <a href="https://formsubmit.io" target="_blank">formsubmit.io</a> to handle its contact form, which takes care of security (reCAPTCHA, etc.) and eliminates the need to host a server.</p>
+        </div>
+
+
         <!-- walker treker -->
         <div id="walkertreker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
           <div class="flex flexrow flexspaced">
@@ -518,49 +572,54 @@
           <p class="greytext">A React Native app where I built all the frontend.</p>
         </div>
         <div id="walkertreker-body" class="roundbottom color2 padded hide">
-          <p>
-            Walker Treker is a social walking game developed in React Native for iOS and Android. I was lucky enough to
-            co-build the very first version with one other developer. The app uses Redux with React to dispatch actions,
-            and the Google Fit API to access the phones pedometer. I was responsible for developing all the frontend
-            code, and my co-developer was responsible for all the backend code. We developed the first version of the
-            game in seven weeks. Two subsequent teams have iterated on our original alpha version.
-          </p>
-          <br />
-          <p>
-            The conceit of the game is this: you and your friends are being pursued by zombies, and you all must take
-            enough steps every day to make it to a safehouse and escape from the undead horde. Here are some of the
-            features of the game:
-          </p>
-          <br />
-          <ul>
-            <li><b>Character creation:</b> each player is assigned a unique token to ensure a specific phone is tied to
-              a specific player.</li>
-            <li><b>Campaign settings:</b> the player who starts the game can choose the difficulty, which will determine
-              how many steps each player must take per day to get to the safehouse.</li>
-            <li><b>Player invites:</b> the player who starts the game can invite friends from their phone's contacts via
-              text messages. These texts have contain a unique link to join the specific campaign. Two players are
-              required but the game can take up to five.</li>
-            <li><b>Power-ups:</b> if players make it to the safehouse with extra steps, they can spend those steps to
-              scavenge for useful items that will aid their team.</li>
-            <li><b>Health and hunger:</b> each player has a hunger level (that increases every hour) and a health level
-              which is reduced by random events or if the player is caught by zombies.</li>
-            <li><b>Random events:</b> at least once per day (potentially multiple time) random events are pushed to the
-              players as notifications. The higher the difficulty level, the more random events occur. Players vote on
-              how to handle the random events and the app responds according to the vote.</li>
-            <li><b>Account recovery:</b> if a player loses access to their account, they're able to recover their
-              account through the app.</li>
-          </ul>
-          <br />
-          <p>
-            <a href="https://github.com/eyecuelab/walkertreker" target="_blank">You can view the code for the app
-              here.</a>
-          </p>
-          <br />
-          <p>
-            <a href="https://github.com/eyecuelab/walkertreker/wiki" target="_blank">You can read up on the app here, on
-              its wiki.</a> If you're interested in playing the game, this is where you should go to learn how to
-            download and install it.
-          </p>
+          <div class="flex flexrow flexspaced">
+            <div class="flex flexcolumn flexstart thirdwidth"><img class="imgfit" src="img/walker_treker1.png" alt="a screenshot from Walker Treker"></div>
+            <div class="flex flexcolumn width60percent">
+              <p>
+                Walker Treker is a social walking game developed in React Native for iOS and Android. I was lucky enough to
+                co-build the very first version with one other developer. The app uses Redux with React to dispatch actions,
+                and the Google Fit API to access the phones pedometer. I was responsible for developing all the frontend
+                code, and my co-developer was responsible for all the backend code. We developed the first version of the
+                game in seven weeks. Two subsequent teams have iterated on our original alpha version.
+              </p>
+              <br />
+              <p>
+                The conceit of the game is this: you and your friends are being pursued by zombies, and you all must take
+                enough steps every day to make it to a safehouse and escape from the undead horde. Here are some of the
+                features of the game:
+              </p>
+              <br />
+              <ul>
+                <li><b>Character creation:</b> each player is assigned a unique token to ensure a specific phone is tied to
+                  a specific player.</li>
+                <li><b>Campaign settings:</b> the player who starts the game can choose the difficulty, which will determine
+                  how many steps each player must take per day to get to the safehouse.</li>
+                <li><b>Player invites:</b> the player who starts the game can invite friends from their phone's contacts via
+                  text messages. These texts have contain a unique link to join the specific campaign. Two players are
+                  required but the game can take up to five.</li>
+                <li><b>Power-ups:</b> if players make it to the safehouse with extra steps, they can spend those steps to
+                  scavenge for useful items that will aid their team.</li>
+                <li><b>Health and hunger:</b> each player has a hunger level (that increases every hour) and a health level
+                  which is reduced by random events or if the player is caught by zombies.</li>
+                <li><b>Random events:</b> at least once per day (potentially multiple time) random events are pushed to the
+                  players as notifications. The higher the difficulty level, the more random events occur. Players vote on
+                  how to handle the random events and the app responds according to the vote.</li>
+                <li><b>Account recovery:</b> if a player loses access to their account, they're able to recover their
+                  account through the app.</li>
+              </ul>
+              <br/>
+              <p>
+                <a href="https://github.com/eyecuelab/walkertreker" target="_blank">You can view the code for the app
+                  here.</a>
+              </p>
+              <br />
+              <p>
+                <a href="https://github.com/eyecuelab/walkertreker/wiki" target="_blank">You can read up on the app here, on
+                  its wiki.</a> If you're interested in playing the game, this is where you should go to learn how to
+                download and install it.
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>

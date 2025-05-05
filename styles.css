@@ -97,7 +97,6 @@ input::file-selector-button:focus {
 
 .h1text {
   font-size: 5rem;
-  font-family: morris_romanbold;
 }
 
 .h2text {
@@ -122,6 +121,14 @@ input::file-selector-button:focus {
 
 .righttext {
   text-align: right;
+}
+
+.morris {
+  font-family: morris_romanbold;
+}
+
+.helv {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* Shadows */
@@ -435,8 +442,16 @@ input::file-selector-button:focus {
   padding: .5rem;
 }
 
+.tinypadded {
+  padding: .125rem;
+}
+
 .topmargin {
   margin-top: 1rem;
+}
+
+.liltopmargin {
+  margin-top: .5rem;
 }
 
 .bottommargin {
@@ -455,7 +470,7 @@ input::file-selector-button:focus {
   margin-left: 1rem;
 }
 
-.center {
+.centermargin {
   margin: 0 auto;
 }
 
@@ -504,8 +519,32 @@ input::file-selector-button:focus {
   width: 50%;
 }
 
+.thirdwidth {
+  width: 33%;
+}
+
 .fullwidth {
   width: 100%;
+}
+
+.width25percent {
+  width: 25%;
+}
+
+.width40percent {
+  width: 40%;
+}
+
+.width50percent {
+  width: 50%;
+}
+
+.width60percent {
+  width: 60%;
+}
+
+.width80percent {
+  width: 80%;
 }
 
 .height1 {
@@ -559,8 +598,7 @@ input::file-selector-button:focus {
   font-weight: bold;
 }
 
-.button:active,
-.button:focus {
+.button:active {
   transform: translateY(0.125rem);
   box-shadow: none;
 }
