@@ -547,6 +547,11 @@ input::file-selector-button:focus {
   width: 80%;
 }
 
+.height0max {
+  transition: max-height 400ms ease-in;
+  max-height: 0;
+}
+
 .height1 {
   height: 1rem;
 }

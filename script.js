@@ -3,7 +3,7 @@
 const expandBody = function (idString) {
   const headID = "#" + idString;
   const bodyID = "#" + idString.split("-")[0] + "-body";
-  $(bodyID).toggle();
+  $(bodyID).slideToggle();
   $(headID).children().eq(0).children().eq(1).toggleClass("flip");
   $(headID).toggleClass("roundtop rounded");
 };
@@ -362,7 +362,7 @@ const getDadJoke = async function () {
 // Event Listeners
 
 $("#hamburger").click(function () {
-  $("#mobileLinks").toggle();
+  $("#mobileLinks").slideToggle();
 })
 
 $("#radica").click(function (event) {
