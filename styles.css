@@ -671,6 +671,8 @@ input::file-selector-button:focus {
 
 .sidebar {
   width: 20%;
+  /* position: sticky;
+  top: 0; */
 }
 
 .sidebarmobile {
