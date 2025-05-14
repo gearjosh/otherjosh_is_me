@@ -473,7 +473,7 @@ $(".colorchange").click(function () {
     "box-shadow": "0 0.125rem " + themes[3],
   });
   $("input[type='file']").removeClass();
-  $("input[type='file']").addClass("bottommargin width30 filebutton" + theme);
+  $("input[type='file']").addClass("bottommargin fullwidth filebutton" + theme);
 });
 
 $(".hold").click(function () {
