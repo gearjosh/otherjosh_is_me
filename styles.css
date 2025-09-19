@@ -859,4 +859,12 @@ input::file-selector-button:focus {
   html {
     font-size: 50%;
   }
+
+  button {
+    font-size: smaller;
+  }
+
+  input::file-selector-button {
+    font-size: smaller;
+  }
 }
