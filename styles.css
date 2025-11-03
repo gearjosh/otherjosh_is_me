@@ -527,6 +527,10 @@ input::file-selector-button:focus {
   width: 100%;
 }
 
+.width20percent {
+  width: 20%;
+}
+
 .width25percent {
   width: 25%;
 }
@@ -638,7 +642,7 @@ input::file-selector-button:focus {
 /* One-offs */
 
 .modal {
-  width: 30vw;
+  max-width: 80vw;
 }
 
 .modal::backdrop {

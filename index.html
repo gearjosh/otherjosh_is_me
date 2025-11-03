@@ -26,6 +26,7 @@
   <dialog id="imgModal" class="modal rounded noborder nooutline color3">
     <form class="flex flexcolumn flexcenter">
       <img class="imgfit" src="" alt="">
+      <p id="imgModalCaption" class="whitetext liltext centertext liltopmargin"></p>
       <button type="submit" formmethod="dialog"
         class="button pointer nooutline noborder color1 rounded width20 whitetext topmargin">Close</button>
     </form>
@@ -519,6 +520,59 @@
 
         <h2 class="h2text morris whitetext mediumshadow topmargin">Projects I've Built</h2>
 
+        <!-- echo echo recording -->
+        <div id="echoecho-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
+          <div class="flex flexrow flexspaced">
+            <h3 class="whitetext mediumshadow h3text">Echo Echo Recording</h3>
+            <p class="whitetext h3text">&#9650;</p>
+          </div>
+          <p class="greytext">A website project for a client's recording studio</p>
+        </div>
+        <div id="echoecho-body" class="roundbottom color2 padded hide">
+          <p class="bottommargin">
+            <a href="https://gearjosh.github.io/echoecho" target="_blank">Echo Echo Recording</a>'s manager asked for a website with a funky retro theme, and we settled on this design. I created
+            everything with Tailwind CSS, which was a delight to work with on a real project for the first time. I had a blast
+            coming up with the the theme and layout on this one.
+          </p>
+          <div>
+            <div class="flex flexrow flexaround">
+              <div class="width40percent">
+                <video class="morerounded" src="img/echoecho_responsive.mov" width="100%" type="video/mp4" loop="true"
+                  muted="true" autoplay></video>
+              </div>
+              <div class="width40percent">
+                <video class="morerounded" src="img/echoecho_gallery.mov" width="100%" type="video/mp4" loop="true" muted="true"
+                  autoplay></video>
+              </div>
+            </div>
+            <p class="greytext liltext centertext liltopmargin">
+              Fully responsive and meticulously styled<i>
+              </i></p>
+          </div>
+        
+          <p class="topmargin bottommargin">
+            Working with Tailwind really simplified the process of designing for all screen sizes. Without writing any media
+            queries I was able to make sure any device could view the site without restriction.
+          </p>
+          <div>
+            <div class="flex flexrow flexaround">
+              <img class="imgfit width40percent pointer expandable" src="img/ee_xs.png" alt="Echoecho's site on an iPhone SE">
+              <img class="imgfit width40percent  pointer expandable" src="img/ee_sm.png"
+                alt="Echoecho's site on a Samsung Galaxy S20 Ultra">
+            </div>
+            <div class="flex flexrow flexaround topmargin">
+              <img class="imgfit width40percent pointer expandable" src="img/ee_md.png" alt="Echoecho's site on an iPad Mini">
+              <img class="imgfit width40percent pointer expandable" src="img/ee_lg.png" alt="Echoecho's site on an iPad Pro">
+            </div>
+          </div>
+          <p class="topmargin">
+            Sadly, due to unforeseeable events, Echo Echo had to close its doors. If you happen to know of a good recording
+            space
+            in Portland, OR, you can still get in touch through the <a href="https://gearjosh.github.io/echoecho"
+              target="_blank">website</a> and let them know.
+          </p>
+        </div>
+        
         <!-- next round trivia -->
         <div id="nextround-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">
           <div class="flex flexrow flexspaced">
@@ -559,9 +613,8 @@
             </div>
             <p class="greytext liltext centertext liltopmargin"><i>Logo and asset design</i></p>
           </div>
-          <p class="topmargin">This project was built to be as low-maintainence as possible for the client. It's all custom JavaScript and CSS, no libraries or frameworks. It uses <a href="https://formsubmit.io" target="_blank">formsubmit.io</a> to handle its contact form, which takes care of security (reCAPTCHA, etc.) and eliminates the need to host a server.</p>
+          <p class="topmargin">This project was built to be as low-maintainence as possible for the client. It's all custom JavaScript and CSS, no libraries or frameworks. It uses <a href="https://formsubmit.co" target="_blank">formsubmit.co</a> to handle its contact form, which takes care of security (reCAPTCHA, etc.) and eliminates the need to host a server.</p>
         </div>
-
 
         <!-- walker treker -->
         <div id="walkertreker-head" class="coolstuff flex flexcolumn rounded color1 padded topmargin pointer">

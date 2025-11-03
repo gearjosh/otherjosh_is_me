@@ -378,6 +378,7 @@ $(".expandable").click(function (event) {
     src: source,
     alt: altText,
   })
+  $("#imgModalCaption").text(altText)
   document.getElementById("imgModal").showModal();
 });
 
