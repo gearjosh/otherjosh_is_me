@@ -438,17 +438,20 @@ $(".colorchange").click(function () {
     $(".header > h1, .header > h4").css("color", "#B7A692");
     $(".whitetext").css("color", "aliceblue");
     $("#me").addClass("bw");
+    $("#me2").addClass("bw");
   } else if (theme == "pastel") {
     $(".greytext").css("color", "#505050");
     $(".whitetext").css("color", "darkmagenta");
     $(".header h1, .header h4").css("color", "lightcyan");
     $(".footer p").css("color", "lightcyan");
     $("#me").removeClass("bw");
+    $("#me2").removeClass("bw");
   } else {
     $(".greytext").css("color", "#505050");
     $(".header > h1, .header > h4").css("color", "aliceblue");
     $(".whitetext").css("color", "aliceblue");
     $("#me").removeClass("bw");
+    $("#me2").removeClass("bw");
   }
 
   for (let i = 1; i <= 5; i++) {
