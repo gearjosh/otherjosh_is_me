@@ -560,6 +560,18 @@ input::file-selector-button:focus {
   height: 1rem;
 }
 
+.height30max {
+  max-height: 30rem;
+}
+
+.heightmax96 {
+  max-height: 96vh;
+}
+
+.heightmax80 {
+  max-height: 80vh;
+}
+
 .hide {
   display: none;
 }
