@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit="cover" />
+  <link href="img/favicon.ico" rel="shortcut icon" type="img/jpeg">
+  <link href="reset.css" rel="stylesheet" type="text/css" media="all">
+  <link href="stylesheet.css" rel="stylesheet" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/themes/redmond/jquery-ui.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="styles.css" rel="stylesheet" type="text/css" media="all">
+  <title>otherjosh's very cool website</title>
+</head>
+
+<body class="color1">
+
+  <dialog id="radicaModal" class="modal rounded noborder nooutline" closedby="any">
+    <form class="flex flexcolumn flexcenter">
+      <img class="imgfit" src="img/radica.png" alt="Radica Video Poker LCD game">
+      <button type="submit" formmethod="dialog"
+        class="button pointer nooutline noborder color1 rounded width20 whitetext">Close</button>
+    </form>
+  </dialog>
+
+  <dialog id="imgModal" class="modal rounded noborder nooutline color3 heightmax96" closedby="any">
+    <form class="flex flexcolumn flexcenter">
+      <img class="imgfit heightmax80" src="" alt="">
+      <p id="imgModalCaption" class="whitetext liltext centertext liltopmargin"></p>
+      <button type="submit" formmethod="dialog"
+        class="button pointer nooutline noborder color1 rounded width20 whitetext topmargin">Close</button>
+    </form>
+  </dialog>
+
+  <!-- container -->
+  <div class="container padded color2">
+    <a href="index.html" style="text-decoration: none;">
+      <div class="header flexcolumn rounded">
+        <h1 class="whitetext h1text morris bigshadow bottommargin">Josh Gearheart <span class="liltext">is</span>
+          otherjosh</h1>
+        <div class="flex flexcolumn flexspaced whitetext h4text lilshadow fullwidth">
+          <h4>Software Developer</h4>
+          <h4>Mailman</h4>
+          <h4>Movie Reviewer</h4>
+          <h4>Experimental Musician</h4>
+          <h4>Insatiable Artist</h4>
+          <h4>Good Cook</h4>
+        </div>
+      </div>
+    </a>
+
+    <!-- content area -->
+    <div class="innercontainer flex flexrow ">
+      <!-- sidebar -->
+      <div class="sidebar flex flexcolumn padded color3 rounded topmargin rightmargin">
+        <img id="me" class="imgfit rounded" title="A photo of otherjosh with tiny flowers in his beard"
+          src="img/otherjosh.jpg" alt="A photo of otherjosh with tiny flowers in his beard">
+
+        <a href="https://letterboxd.com/otherjosh/" target="_blank">
+          <button type="button"
+            class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Read my movie
+            reviews</button>
+        </a>
+
+        <a href="https://open.spotify.com/artist/0RDRAIStOOEz0xEB9EcFIt" target="_blank">
+          <button type="button"
+            class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Listen to my bad
+            music project</button>
+        </a>
+
+        <a href="https://open.spotify.com/artist/0xRUQxosi9oTtqbFJuMcw5?si=xQ72CUzISaKwW7ix3lmWgg" target="_blank">
+          <button type="button"
+            class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Listen to my
+            improvised music</button>
+        </a>
+
+        <a href="https://github.com/gearjosh" target="_blank">
+          <button type="button"
+            class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Check out the code I
+            write</button>
+        </a>
+
+        <a href="https://www.linkedin.com/in/josh-gearheart/" target="_blank">
+          <button type="button"
+            class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin">Check out my career
+            history</button>
+        </a>
+      </div>
+
+      <div class="sidebarmobile flexcolumn padded color3 rounded topmargin rightmargin">
+        <div class="flex flexrow flexcenteralign flexspaced">
+          <img id="me2" class="imgfit rounded" title="A photo of otherjosh with tiny flowers in his beard"
+            src="img/otherjosh.jpg" alt="A photo of otherjosh with tiny flowers in his beard">
+          <h1 class="h1text morris whitetext mediumshadow">Links</h1>
+          <a href="javascript:void(0);" class="whitetext mediumshadow" id="hamburger"">
+              <i class=" fa fa-bars"></i>
+          </a>
+        </div>
+        <div class="flex flexcolumn" id="mobileLinks">
+          <a href="https://letterboxd.com/otherjosh/" target="_blank">
+            <button type="button"
+              class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin centertext">Read
+              my
+              movie reviews</button>
+          </a>
+          <a href="https://open.spotify.com/artist/0RDRAIStOOEz0xEB9EcFIt" target="_blank">
+            <button type="button"
+              class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin centertext">Listen
+              to
+              my bad music project</button>
+          </a>
+          <a href="https://open.spotify.com/artist/0xRUQxosi9oTtqbFJuMcw5?si=xQ72CUzISaKwW7ix3lmWgg" target="_blank">
+            <button type="button"
+              class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin centertext">Listen
+              to
+              my improvised music</button>
+          </a>
+          <a href="https://github.com/gearjosh" target="_blank">
+            <button type="button"
+              class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin centertext">Check
+              out
+              the code I write</button>
+          </a>
+          <a href="https://www.linkedin.com/in/josh-gearheart/" target="_blank">
+            <button type="button"
+              class="button pointer nooutline noborder color1 rounded fullwidth whitetext topmargin centertext">Check
+              out
+              my career history</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- main -->
+      <div class="main padded rounded color4 topmargin">
+        <h2 class="h2text whitetext mediumshadow morris">My actual laugh</span></h2>
+
+        <!-- audio of me laughing -->
+        <div id="laughter" class="flex flexcolumn rounded color1 padded topmargin pointer">
+          <div class="flex flexrow flexspaced">
+            <h3 class="whitetext mediumshadow h3text">10 seconds of me laughing</h3>
+          </div>
+          <p class="greytext">Recorded during the first ten minutes of the 2025 Naked Gun movie, 15 February 2026.</p>
+          <audio controls src="I laugh.mp3" class="topmargin"></audio>
+          <p class="topmargin"><a href="index.html">Back to otherjosh.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer flex flexcolumn flexend rounded topmargin">
+      <div class="transparent padded">
+        <p class="whitetext centertext">This site was built with artisanal, small-batch code meticulously hand-crafted
+          and styled by otherjosh.</p>
+        <p class="whitetext centertext liltext topmargin"><i id="dadJoke"></i></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
